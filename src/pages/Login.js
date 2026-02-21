@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../stakeholderlayout.css";
 
@@ -12,7 +13,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://35.192.123.99:5001/api/login", {
+      const res = await axios.post(`${API_BASE_URL}/api/login`, {
         email,
         password,
       });

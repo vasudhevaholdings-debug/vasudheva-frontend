@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { API_BASE_URL } from "../config";
+
 export default function ContactForm({
   presetCategory = "",
   routingContext = {}
@@ -40,7 +42,7 @@ export default function ContactForm({
 
     try {
       const response = await fetch(
-        "https://35.192.123.99:5001/api/contact",
+        `${API_BASE_URL}/api/contact`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
