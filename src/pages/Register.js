@@ -21,7 +21,7 @@ export default function Register() {
     }
 
     try {
-      await axios.post("http://localhost:5001/api/register", {
+      await axios.post("http://35.192.123.99:5001/api/register", {
         name,
         email,
         contactNumber,     // ← sending to backend
