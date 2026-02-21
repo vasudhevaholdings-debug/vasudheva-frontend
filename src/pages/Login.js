@@ -12,7 +12,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://35.192.123.99:5001/api/login", {
+      const res = await axios.post("https://35.192.123.99:5001/api/login", {
         email,
         password,
       });

@@ -40,7 +40,7 @@ export default function ContactForm({
 
     try {
       const response = await fetch(
-        "http://35.192.123.99:5001/api/contact",
+        "https://35.192.123.99:5001/api/contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
