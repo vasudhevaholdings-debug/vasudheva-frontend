@@ -32,7 +32,7 @@ export default function Login() {
     >
       <div className="card shadow border-0" style={{ maxWidth: "380px", width: "100%" }}>
         <div className="card-body p-4 p-md-5">
-          <h3 className="text-center mb-4 fw-bold text-primary">Sign In</h3>
+          <h3 className="text-center mb-4 fw-bold text-primary">Login</h3>
 
           <form onSubmit={handleLogin}>
             <div className="mb-3">
