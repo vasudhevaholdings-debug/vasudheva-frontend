@@ -143,6 +143,23 @@ section:nth-child(even) {
   color: var(--primary-dark);
 }
 
+.nav-logout-btn {
+  margin-left: 15px;
+  color: var(--text-on-primary);
+  border: 2px solid rgb(231, 235, 241);
+  border-radius: 10px;
+  padding: 2px 8px;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.nav-logout-btn:hover {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
 .header h3 {
   margin: 0;
   font-size: 18px;
