@@ -75,6 +75,7 @@ function App() {
     <>
       {!hideHeader && <Header />}
 
+      <div style={!hideHeader ? { paddingTop: "111px" } : undefined}>
       <Routes>
         {/* Auth Pages */}
         <Route path="/login" element={<Login />} />
@@ -146,6 +147,7 @@ function App() {
       <Route path="/ethical" element={<Ethical />} />
       <Route path="/commitment" element={<Commitment />} />
       </Routes>
+      </div>
     </>
   );
 }
