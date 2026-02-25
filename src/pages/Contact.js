@@ -90,13 +90,13 @@ export default function Contact() {
         </section>
 
         {/* SECTION 3: GENERAL CONTACT FORM */}
-        <section className="general-form-section">
+        {/* <section className="general-form-section">
           <h2>General Enquiry</h2>
           <p>
             For matters not covered by structured collaboration paths.
-          </p>
+          </p> */}
 
-          {/* This is placeholder markup – implement actual form with your preferred library */}
+          {/* This is placeholder markup – implement actual form with your preferred library
           <form className="general-contact-form">
             <div className="form-group">
               <label htmlFor="name">Name</label>
@@ -141,7 +141,7 @@ export default function Contact() {
             We review all messages carefully and respond where appropriate. 
             Please allow reasonable time for response.
           </p>
-        </section>
+        </section> */}
 
         {/* SECTION 4: GOVERNANCE, ETHICS & COMPLIANCE */}
         <section className="governance-trust">
@@ -172,11 +172,11 @@ export default function Contact() {
         <section className="legal-links">
           <h2>Legal & Policy Information</h2>
           <ul className="policy-list">
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms-of-use">Terms of Use</a></li>
-            <li><a href="/ip-trademark-policy">Intellectual Property & Trademark Policy</a></li>
-            <li><a href="/code-of-conduct">Code of Conduct</a></li>
-            <li><a href="/grievance-redressal">Grievance Redressal Policy</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
+            <li><a href="/trade">Intellectual Property & Trademark Policy</a></li>
+            <li><a href="/conduct">Code of Conduct</a></li>
+            <li><a href="/grievance">Grievance Redressal Policy</a></li>
           </ul>
         </section>
 
@@ -184,7 +184,15 @@ export default function Contact() {
         <section className="social-presence">
           <h2>Public Presence</h2>
           <ul>
-            <li>LinkedIn (Group Page)</li>
+            <li>
+  <a 
+    href="https://www.linkedin.com/company/vasudheva-holdings/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    LinkedIn (Group Page)
+  </a>
+</li>
             {/* Add actual links when available */}
             {/* <li>YouTube / Media Channels (if applicable)</li> */}
           </ul>

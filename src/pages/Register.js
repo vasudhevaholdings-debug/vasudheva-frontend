@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { API_BASE_URL } from "../config";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../stakeholderlayout.css";
+import backgroundImage from '../assets/hero/silhouettes-modern-background_1048-3022.jpg';
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -22,7 +22,7 @@ export default function Register() {
     }
 
     try {
-      await axios.post(`${API_BASE_URL}/api/register`, {
+      await axios.post("http://localhost:5000/api/register", {
         name,
         email,
         contactNumber,     // ← sending to backend
@@ -39,10 +39,16 @@ export default function Register() {
   return (
     <div
       className="d-flex align-items-center justify-content-center vh-100 bg-light px-3"
-      style={{ overflow: "hidden" }}
+        style={{
+          minHeight: '100vh',
+          backgroundImage: `url(${backgroundImage})`, // or full URL if hosted
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
     >
       <div className="card shadow border-0" style={{ maxWidth: "420px", width: "100%" }}>
-        <div className="card-body p-4 p-md-5">
+        <div className="card-body p-3 p-md-4">
           <h3 className="text-center mb-4 fw-bold text-primary">Register</h3>
 
           <form onSubmit={handleRegister}>
@@ -94,7 +100,7 @@ export default function Register() {
               />
             </div>
 
-            <button type="submit" className="btn shadow-sm btn-lg w-100 btn-primary">
+            <button type="submit" className="btn shadow-sm btn-lg w-100 ">
               Create Account
             </button>
           </form>

@@ -1,24 +1,14 @@
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../assets/hero/Logo.jpeg";
 import { IoMdContact } from "react-icons/io";
 import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  useLocation(); // re-render on route change so auth state stays current
-
-  const isLoggedIn = !!localStorage.getItem("token");
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    navigate("/login");
-  };
 
   return (
-    <header className="header header-fixed">
+    <header className="header">
       
       {/* Left */}
       <div className="header-left">
@@ -51,12 +41,11 @@ export default function Header() {
 
       {/* Right */}
       <nav className="header-nav desktop-nav">
-        {isLoggedIn ? (
-          <button className="btn btn-link nav-logout-btn" onClick={handleLogout}>Logout</button>
-        ) : (
-          <Link to="/login">Login</Link>
-        )}
+        <Link to="/login">Login</Link>
         <Link to="/contact">Contact Us <IoMdContact className="contact-icon" /></Link>
+        {/* <a href="/#contact">
+          Contact Us <IoMdContact className="contact-icon" />
+        </a> */}
       </nav>
 
       {/* Hamburger */}
@@ -76,11 +65,7 @@ export default function Header() {
           <Link to="/parentcompanies" onClick={() => setMenuOpen(false)}>Companies</Link>
           <Link to="/insights" onClick={() => setMenuOpen(false)}>Insights</Link>
           <Link to="/collaborate" onClick={() => setMenuOpen(false)}>Collaborate</Link>
-          {isLoggedIn ? (
-            <button className="btn btn-link nav-logout-btn" onClick={() => { setMenuOpen(false); handleLogout(); }}>Logout</button>
-          ) : (
-            <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
-          )}
+          <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
          <Link to="/contact" onClick={() => setMenuOpen(false)}>
             Contact Us <IoMdContact className="contact-icon" />
           </Link>

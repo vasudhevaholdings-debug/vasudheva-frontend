@@ -1,6 +1,9 @@
 import "../stakeholderlayout.css";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Philosophy() {
+  const navigate = useNavigate();
   return (
     <section className="page-wrapper">
       <div className="container">
@@ -223,7 +226,9 @@ export default function Philosophy() {
           </ul>
           <div className="button-group">
             <button>Explore How Our Companies Work</button>
-            <button>Start a Conversation With Us</button>
+            <button onClick={() => navigate("/Contact")}>
+  Start a Conversation With Us
+</button>
           </div>
         </div>
       </div>

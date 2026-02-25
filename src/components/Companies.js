@@ -2,8 +2,15 @@ import siLogo from "../assets/logos/siLogo.png";
 import eduLogo from "../assets/logos/eduLogo.png";
 import mediaLogo from "../assets/logos/mediaLogo_transparent.png";
 import publishLogo from "../assets/logos/publishLogo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Companies() {
+  const navigate = useNavigate();
+
+  const handleExploreServices = (companyName) => {
+    navigate(`/services/${companyName}`);
+  };
+
   return (
     <section id="companies">
       <div className="container">
@@ -18,9 +25,12 @@ export default function Companies() {
             <p>Research • Consulting • Strategy • Systems Design</p>
 
             <div className="company-actions">
-              <button className="company-btn primary">
-                Explore Services
-              </button>
+              <button
+  className="company-btn primary"
+  onClick={() => navigate("/strategicservice")}
+>
+  Explore Services
+</button>
               <button className="company-btn primary">
                 Visit Company Website
               </button>
@@ -35,7 +45,10 @@ export default function Companies() {
             <p>Education • Learning Platforms • Skills • Institutions</p>
 
             <div className="company-actions">
-              <button className="company-btn primary">
+              <button
+                className="company-btn primary"
+                onClick={() => navigate("/eduinnovationservice")}
+              >
                 Explore Services
               </button>
               <button className="company-btn primary">

@@ -10,9 +10,9 @@ const slides = [
     image: image1,
     title: "Vasudheva Holdings Pvt. Ltd.",
     subtitle:
-      "Parent, Holding & Governance Company of the Vasudheva Group",
+      "Governance, Integration & Stewardship for the Vasudheva Group",
     text:
-      "We integrate specialized companies through governance, long-term thinking, and systemic design."
+      "Parent, Holding & Governance Company responsible for the strategic coordination, institutional governance, and institutional oversight, and intellectual property stewardship of the Vasudheva Group."
   },
   {
     image: image2,
@@ -67,9 +67,9 @@ export default function Hero() {
               <p>{slide.text}</p>
 
               <div className="hero-actions">
-                <a href="#companies" className="btn-primary">
+                {/* <a href="#companies" className="btn-primary">
                   View Group Structure
-                </a>
+                </a> */}
                 <a href="#contact" className="btn-secondary">
                   Route a Request <HiMiniArrowTrendingUp className="arrow-icon" />
                 </a>

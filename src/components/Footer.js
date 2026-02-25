@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/hero/Logo.jpeg";  
 import {
   FaLinkedinIn,
-  FaYoutube,
-  FaFacebookF,
-  FaInstagram
+  FaTwitter
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -74,10 +72,9 @@ export default function Footer() {
         </p>
 
         <div className="footer-social">
-          <a href="#"><FaLinkedinIn /></a>
-          <a href="#"><FaYoutube /></a>
-          <a href="#"><FaFacebookF /></a>
-          <a href="#"><FaInstagram /></a>
+          <Link to="https://www.linkedin.com/company/vasudheva-holdings/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></Link>
+          <a href="https://x.com/Vasudhevagroup" target="_blank" rel="noopener noreferrer"> <FaTwitter /></a>
+          
         </div>
       </div>
     </footer>

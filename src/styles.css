@@ -35,14 +35,21 @@ html {
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-  background: var(--bg-main);
+  /* background: var(--bg-main); */
   color: var(--text-main);
   line-height: 1.5;
+  background: linear-gradient(170deg, #fff86b, #38a0a6, #aadf65);
+  background-size: 600% 600%;
+  
 }
+
 
 a {
   color: var(--primary);
   text-decoration: none;
+}
+h2{
+  font-size: 45px;
 }
 
 /* =========================
@@ -143,23 +150,6 @@ section:nth-child(even) {
   color: var(--primary-dark);
 }
 
-.nav-logout-btn {
-  margin-left: 15px;
-  color: var(--text-on-primary);
-  border: 2px solid rgb(231, 235, 241);
-  border-radius: 10px;
-  padding: 2px 8px;
-  text-decoration: none;
-  background: none;
-  cursor: pointer;
-  font-size: inherit;
-}
-
-.nav-logout-btn:hover {
-  text-decoration: none;
-  color: var(--primary-dark);
-}
-
 .header h3 {
   margin: 0;
   font-size: 18px;
@@ -202,7 +192,7 @@ section:nth-child(even) {
 }
 
 /* HERO */
-.hero {
+/* .hero {
   background:
     linear-gradient(
       180deg,
@@ -212,7 +202,8 @@ section:nth-child(even) {
     url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
   background-size: cover;
   background-position: center;
-}
+  
+} */
 
 .hero h1 {
   font-size: 48px;
@@ -245,7 +236,7 @@ section h2 {
   font-size: 35px;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 55px;
+  margin-bottom: 25px;
 }
 
 /* SYSTEM MAP */
@@ -381,7 +372,7 @@ section h2 {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-soft);
   transition: all 0.25s ease;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .company-card::before {
@@ -449,15 +440,34 @@ section h2 {
    WHY VASUDHEVA HOLDINGS
 ========================= */
 
-.why-vasudheva {
-  background: linear-gradient(180deg, #f8fafc 0%, #eef4fb 100%);
+/* .why-vasudheva {
   padding: 100px 24px;
+} */
+ .why-vasudheva::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 500px; 
+  height: 600px;
+  
+  background-image: url("../src/assets/hero/tree.jpeg"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  opacity: 0.08; 
+  z-index: 0;
 }
 
 .why-vasudheva .container {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .why-vasudheva h2 {
@@ -465,7 +475,6 @@ section h2 {
   padding-bottom: 12px;
   font-size: 36px;
   font-weight: 700;
-  /* margin-bottom: 12px; */
   color: var(--text-main);
 }
 
@@ -475,22 +484,19 @@ section h2 {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  width: 60px;        /* ← narrow line width */
-  height: 3px;        /* line thickness */
+  width: 60px;        
+  height: 3px;        
   background: linear-gradient(90deg, #2563eb, #1e40af);
   border-radius: 2px;
 }
 
 .why-vasudheva h4 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--primary);
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  margin-bottom: 30px;
+  
 }
-
-/* Bullet List */
 .why-vasudheva ul {
   list-style: disc;
   text-align: left;
@@ -512,14 +518,12 @@ section h2 {
   transform: translateX(4px);
 }
 
-/* CTA Link */
+
 .why-vasudheva a {
-  /* display: inline-block; */
   margin-top: 10px;
   padding: 12px 28px;
-  border-radius: 999px;
-  background: var(--primary);
-  color: #ffffff;
+  border-radius: 25px;
+  color: var(--text-main);
   font-weight: 500;
   font-size: 14px;
   transition: all 0.25s ease;
@@ -527,6 +531,7 @@ section h2 {
 
 .why-vasudheva a:hover {
   background: var(--primary-dark);
+  color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
 }
@@ -585,11 +590,11 @@ button:hover {
 }
 
 /* UNDER DEVELOPMENT */
-.under-dev {
+/* .under-dev {
   background: #eaf2fb;
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
-}
+} */
 
 /* =========================
    FOOTER
@@ -723,8 +728,8 @@ button:hover {
 /* HERO IMAGE SLIDER */
 .hero-slider {
   position: relative;
-  height: 90vh;
-  overflow: hidden;
+  height: 60vh;
+  /* overflow: hidden; */
 }
 
 .hero-slide {
@@ -733,7 +738,7 @@ button:hover {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transform: scale(1.05);
+  transform: scale(1.09);
   transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
@@ -769,7 +774,7 @@ button:hover {
 .hero-content p {
   color: #cbd5f5;
   max-width: 620px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .hero-actions {
@@ -782,7 +787,7 @@ button:hover {
 .btn-secondary {
   background: transparent;
   color: #ffffff;
-  padding: 14px 28px;
+  padding: 8px 23px;
   border-radius: 999px;
   font-weight: 500;
   font-size: 14px;
@@ -872,7 +877,7 @@ button:hover {
 /* GROUP STRUCTURE */
 #companies {
   background: rgba(37, 99, 235, 0.25);
-  padding: 100px 24px;
+  padding: 70px 24px;
 }
 
 #companies .container {
@@ -882,11 +887,16 @@ button:hover {
 }
 
 #companies h2 {
-  font-size: 34px;
   font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 56px;
+  /* margin-bottom: 56px; */
   letter-spacing: 0.3px;
+}
+.group-description {
+  /* max-width: 700px; */
+  margin: 0 auto 60px auto;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
 }
 
 .group-parent {
@@ -942,7 +952,7 @@ button:hover {
 .group-title {
   font-size: 38px;
   font-weight: 600;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   letter-spacing: 0.5px;
 }
 
@@ -971,6 +981,7 @@ button:hover {
 
 .subsidiary-card p {
   font-size: 15px;
+  margin-top: 12px;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
@@ -1008,10 +1019,13 @@ button:hover {
 /* =====================================================
    GLOBAL RESPONSIVE SAFETY
 ===================================================== */
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
+ html,body {
+  overflow-x: hidden;
+ }
 
 img {
   max-width: 100%;
