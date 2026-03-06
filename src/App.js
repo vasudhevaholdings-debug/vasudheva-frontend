@@ -86,14 +86,14 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         {/* Protected Example */}
-        <Route
+        {/* <Route
           path="/msme"
           element={
             <ProtectedRoute>
               <Msme />
             </ProtectedRoute>
           }
-        />
+        /> */}
 
         {/* Home Page */}
         <Route
@@ -117,6 +117,7 @@ function App() {
         />
 
         {/* Other Pages */}
+        <Route path="/msme" element={<Msme />} />
         <Route path="/philosopy" element={<Philosopy />} />
         <Route path="/leadership" element={<Leadership />} />
         <Route path="/services" element={<Services />} />

@@ -18,13 +18,13 @@ export default function Companies() {
         </p>
 
         {/* Parent Company */}
-        <Link to="/holdings" className="company-link">
+        {/* <Link to="/holdings" className="company-link">
           <div className="group-parent">
             <img src={parentLogo} alt="Vasudheva Holdings" />
             <h3>Vasudheva Holdings</h3>
             <span>Governance & IP</span>
           </div>
-        </Link>
+        </Link> */}
 
         {/* Subsidiaries */}
         <div className="subsidiary-grid">
@@ -32,28 +32,32 @@ export default function Companies() {
           <Link to="/strategicrole" className="company-link">
             <div className="subsidiary-card">
               <img src={siLogo} alt="Strategic Innovations" />
-              <p> Strategic Innovations </p>
+              <p>Vasudheva Strategic Innovations Pvt. Ltd. </p>
+              <span className="text-muted">"Thinking From The Scratch..."</span>
             </div>
           </Link>
 
           <Link to="/innovationrole" className="company-link">
             <div className="subsidiary-card">
               <img src={eduLogo} alt="EduInnovation" />
-              <p>EduInnovation </p>
+              <p>Vasudheva EduInnovation Pvt. Ltd. </p>
+              <span className="text-muted" >"Beyond Framework..."</span>
             </div>
           </Link>
 
           <Link to="/mediarole" className="company-link">
             <div className="subsidiary-card">
               <img src={mediaLogo} alt="Media" />
-              <p> Media </p>
+              <p>Vasudheva Media Pvt. Ltd. </p>
+              <span className="text-muted">"Nurturing The Next..."</span>
             </div>
           </Link>
 
           <Link to="/publishrole" className="company-link">
             <div className="subsidiary-card">
               <img src={publishLogo} alt="Publishing" />
-              <p>Publishing</p>
+              <p>Vasudheva Publishing Pvt. Ltd.</p>
+              <span className="text-muted">"Thought, Imagination, Idea..."</span>
             </div>
           </Link>
 

@@ -326,10 +326,10 @@
 /* ===================================
    LEADERSHIP PAGE
 =================================== */
-/* Leadership Page Styles - Resume-Like Design Inspired by PDF */
+
 .leadership-page.resume-style {
   color: #333;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 40px;
   background: #fff;
@@ -430,7 +430,6 @@
 .resume-text {
   font-size: 1.1em;
   margin-bottom: 15px;
-  text-align: justify;
 }
 
 .resume-list.diamond-list {
@@ -591,6 +590,31 @@
 .resume-link:hover {
   background: #0056b3;
 }
+.read-more-btn {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 15px 0;
+  transition: background 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.read-more-btn:hover {
+  background: #0056b3;
+}
+
+.expanded-content {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -610,11 +634,24 @@
 
   .resume-photo.founder-photo {
     width: 100%;
-    height: 200px;
+    height: 245px;
   }
 
   .resume-card-content.founder-info {
     padding: 20px;
+  }
+   .resume-table,
+  .leadership-table {
+    font-size: 0.85em;   /* smaller text */
+    margin: 10px 0;
+  }
+
+  .resume-table th,
+  .resume-table td,
+  .leadership-table th,
+  .leadership-table td {
+    align-items: center;
+    padding: 6px 1px;   
   }
 
   .resume-cta {

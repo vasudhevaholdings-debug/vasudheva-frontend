@@ -63,7 +63,7 @@ export default function Parentcompanies() {
           <h2>Delivery Companies (Subsidiaries)</h2>
 
           {/* COMPANY 1 – Strategic Innovations */}
-          <div className="company-card">
+          <div className="company-card-box">
             <h3>Vasudheva Strategic Innovations Pvt. Ltd.</h3>
             <p className="domain">
               Research • Consulting • Strategy • Systems & Institutional Design
@@ -102,7 +102,7 @@ export default function Parentcompanies() {
           </div>
 
           {/* COMPANY 2 – EduInnovation */}
-          <div className="company-card">
+          <div className="company-card-box">
             <h3>Vasudheva EduInnovation Pvt. Ltd.</h3>
             <p className="domain">
               Education • Learning Systems • Skills • Capacity Building
@@ -141,7 +141,7 @@ export default function Parentcompanies() {
           </div>
 
           {/* COMPANY 3 – Media */}
-          <div className="company-card">
+          <div className="company-card-box">
             <h3>Vasudheva Media Pvt. Ltd.</h3>
             <p className="domain">
               Media • Communication • Content • Narrative & Influence
@@ -179,7 +179,7 @@ export default function Parentcompanies() {
           </div>
 
           {/* COMPANY 4 – Publishing */}
-          <div className="company-card">
+          <div className="company-card-box">
             <h3>Vasudheva Publishing Pvt. Ltd.</h3>
             <p className="domain">
               Publishing • Knowledge Production • IP Dissemination

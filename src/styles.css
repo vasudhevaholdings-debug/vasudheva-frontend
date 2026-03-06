@@ -1071,7 +1071,7 @@ button:hover {
 
 .subsidiary-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   max-width: 1000px;
   margin: 0 auto;
@@ -1093,6 +1093,7 @@ button:hover {
 }
 
 .subsidiary-card p {
+  color: #000000;
   font-size: 15px;
   margin-top: 12px;
   font-weight: 500;
@@ -1171,9 +1172,7 @@ img {
     width: 100%;
   }
 
-  .subsidiary-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
 }
 
 /* =====================================================
@@ -1418,9 +1417,10 @@ img {
   }
   .subsidiary-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 16px;
   }
+  
 
   .company-link {
     display: block;

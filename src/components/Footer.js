@@ -31,6 +31,7 @@ export default function Footer() {
           <Link to="/insights">Insights</Link>
           <Link to="/collaborate">Collaborate</Link>
           <Link to="/parentcompanies">Parent Companies</Link>
+          <Link to="/leadership">Leadership</Link>
         </div>
 
         {/* Column 3 */}
@@ -42,14 +43,8 @@ export default function Footer() {
           <Link to="/conduct">Code of Conduct</Link>
           <Link to="/grievance">Grievance Redressal</Link>
 
-          {/* Authority External Link for SEO Trust */}
-          <a
-            href="https://www.startupindia.gov.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Startup India
-          </a>
+         
+         
         </div>
 
         {/* Column 4 */}
@@ -63,7 +58,10 @@ export default function Footer() {
             connect@vasudhevaholdings.com
           </a>
 
-          <a href="tel:+918576929037" className="footer-phone">
+          <a href="tel:+917523099113" className="footer-phone">
+            +91 7523099113
+          </a>
+          <a href="tel:+91 8576929037" className="footer-phone">
             +91 8576929037
           </a>
 
