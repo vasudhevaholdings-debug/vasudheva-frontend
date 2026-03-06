@@ -28,10 +28,11 @@ export default function Footer() {
           <h4>Quick Links</h4>
           <Link to="/philosopy">Group & Philosophy</Link>
           <Link to="/services">Services & Solutions</Link>
+          <Link to="/leadership">Our Teams</Link>
           <Link to="/insights">Insights</Link>
           <Link to="/collaborate">Collaborate</Link>
           <Link to="/parentcompanies">Parent Companies</Link>
-          <Link to="/leadership">Leadership</Link>
+          
         </div>
 
         {/* Column 3 */}

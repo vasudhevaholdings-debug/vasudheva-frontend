@@ -548,21 +548,13 @@ society
             
             <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
             <p className="resume-text">
-              The success of any institutional initiative depends not only on design and intent but on
-            disciplined execution and operational coherence. My role within the Vasudheva Group
-            focuses on ensuring that systems, processes, and operational workflows are aligned with the
-            Group’s governance standards and strategic objectives.
-            Across sectors, I have observed that well-designed strategies often falter during
-            implementation due to fragmented processes, unclear roles, or weak coordination. At
-            Vasudheva, we prioritise operational integrity by establishing clear workflows, documentation
-            standards, and coordination mechanisms that enable teams to translate strategic
-            frameworks into actionable outcomes.
-            As a founding member, I view operations as the backbone of institutional credibility. When
-            systems function reliably and processes are transparent, stakeholders gain confidence, and
-            organisations can scale sustainably.
-            Our commitment is to build operational systems that are efficient, accountable, and
-            adaptable — ensuring that institutional transformation is not only envisioned but effectively
-            realised.
+              "“Our goal is to build systems that empower people, institutions, and communities to function
+harmoniously. Through responsible technology and integrated processes, we aim to enable
+cooperation, reduce inefficiencies, and contribute to a more inclusive and sustainable
+society".
+ <blockquote className="resume-quote">As a founding member, I view operations as the backbone of institutional credibility. When
+systems function reliably and processes are transparent, stakeholders gain confidence, and
+organisations can scale sustainably "</blockquote>
               </p>
             <button 
               className="read-more-btn" 
