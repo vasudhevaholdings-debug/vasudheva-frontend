@@ -1,6 +1,6 @@
 :root {
   /* Core palette */
-  --bg-main: rgba(37, 99, 235, 0.25);  
+  --bg-main: rgba(169, 210, 106, 0.791);  
   --bg-section: #eef4fb;
   --card-bg: #ffffff;
 
@@ -35,10 +35,10 @@ html {
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  /* background: var(--bg-main); */
+  background: var(--bg-main);
   color: var(--text-main);
   line-height: 1.5;
-  background: linear-gradient(170deg, #fff86b, #38a0a6, #aadf65);
+  /* background: linear-gradient(170deg, #fff86b, #38a0a6, #aadf65); */
   background-size: 600% 600%;
   
 }
@@ -52,17 +52,32 @@ h2{
   font-size: 45px;
 }
 
+
 /* =========================
    CONTAINERS & SECTIONS
 ========================= */
 section {
   padding: 70px 24px;
-  animation: fadeUp 0.7s ease both;
+  
 }
 
 
 section:nth-child(even) {
   background: rgba(60, 74, 135, 0.139);
+}
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.animate-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.animate-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container {
@@ -1107,6 +1122,7 @@ button:hover {
 }
 
 /* ANIMATIONS */
+
 @keyframes fadeUp {
   from {
     opacity: 0;

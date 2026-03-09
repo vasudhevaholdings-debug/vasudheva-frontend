@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -71,6 +71,29 @@ function App() {
     setPresetCategory(result.domain || result.stakeholder);
   };
 
+  // 🔹 Scroll Animation Logic
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    sections.forEach((section) => {
+      section.classList.add("animate-section");
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   // Hide header & footer on auth pages
   const hideLayout =
     location.pathname === "/login" ||
@@ -85,16 +108,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Protected Example */}
-        {/* <Route
-          path="/msme"
-          element={
-            <ProtectedRoute>
-              <Msme />
-            </ProtectedRoute>
-          }
-        /> */}
-
         {/* Home Page */}
         <Route
           path="/"
@@ -104,8 +117,7 @@ function App() {
               <ProblemSolve />
               <FourStepFlow />
               <SystemMap />
-              
-              {/* <Companies /> */}
+
               <DecisionTree onComplete={handleDecisionComplete} />
               <Holding />
               <ContactForm
@@ -154,7 +166,9 @@ function App() {
         <Route path="/ethical" element={<Ethical />} />
         <Route path="/commitment" element={<Commitment />} />
       </Routes>
+
       <ScrollToTopButton />
+
       {!hideLayout && <Footer />}
     </>
   );
