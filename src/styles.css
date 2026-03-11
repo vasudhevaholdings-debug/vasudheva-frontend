@@ -51,7 +51,23 @@ a {
 h2{
   font-size: 45px;
 }
+h2 {
+  position: relative;
+  padding-bottom: 12px;
+  text-align: center;
+}
 
+h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  border-radius: 2px;
+}
 
 /* =========================
    CONTAINERS & SECTIONS
@@ -236,14 +252,17 @@ section:nth-child(even) {
   font-weight: 700;
   margin-bottom: 14px;
 }
+.hero-content h3{
+  color:rgba(104, 208, 176, 0.5);
+}
 
-.hero h2 {
+/* .hero h3 {
   font-size: 20px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--primary-dark);
   max-width: 780px;
   margin-bottom: 20px;
-}
+} */
 
 .hero p {
   max-width: 720px;
@@ -298,6 +317,87 @@ section h2 {
   margin-bottom: 25px;
 }
 
+/* =========================
+   SECTION
+========================= */
+
+.problem-section {
+  padding: 80px 20px;
+}
+
+/* TITLE */
+
+.problem-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* SUBTITLE */
+
+.problem-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 45px;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+/* LIST */
+
+.problem-list {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  padding: 0;
+  list-style: disc;
+}
+
+/* LIST ITEM */
+
+.problem-item {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+
+  opacity: 0;
+  transform: translateX(60px);
+
+  animation: fadeRight 0.8s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+/* hover effect */
+
+.problem-item:hover {
+  padding-left: 8px;
+  color: var(--primary-dark);
+}
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* STAGGER ANIMATION */
+
+.problem-item:nth-child(1) { animation-delay: 0.2s; }
+.problem-item:nth-child(2) { animation-delay: 0.4s; }
+.problem-item:nth-child(3) { animation-delay: 0.6s; }
+.problem-item:nth-child(4) { animation-delay: 0.8s; }
+.problem-item:nth-child(5) { animation-delay: 1s; }
+.problem-item:nth-child(6) { animation-delay: 1.2s; }
+.problem-item:nth-child(7) { animation-delay: 1.4s; }
 
 /* SYSTEM MAP */
 .system-map {
@@ -571,31 +671,14 @@ section h2 {
 /* .why-vasudheva {
   padding: 100px 24px;
 } */
- .why-vasudheva::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  width: 600px; 
-  height: 565px;
-  
-  background-image: url("../src/assets/hero/tree.jpeg"); 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-
-  opacity: 0.08; 
-  z-index: 0;
-}
+ 
 
 .why-vasudheva .container {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-  position: relative;
-  z-index: 1;
+  /* position: relative;
+  z-index: 1; */
 }
 
 .why-vasudheva h2 {
@@ -638,14 +721,13 @@ section h2 {
   line-height: 1.8;
   margin-bottom: 14px;
   color: var(--text-muted);
-  transition: all 0.2s ease;
+  
 }
 
 .why-vasudheva ul li:hover {
   color: var(--text-main);
   transform: translateX(4px);
 }
-
 
 .why-vasudheva a {
   margin-top: 10px;
@@ -1004,7 +1086,8 @@ button:hover {
 
 /* GROUP STRUCTURE */
 #companies {
-  background: rgba(37, 99, 235, 0.25);
+  background: var(--bg-main);
+  /* background: rgba(37, 99, 235, 0.25); */
   padding: 70px 24px;
 }
 
@@ -1080,8 +1163,26 @@ button:hover {
 .group-title {
   font-size: 38px;
   font-weight: 600;
+   position: relative;
+  padding-bottom: 12px;
+  text-align: center;
   /* margin-bottom: 60px; */
-  letter-spacing: 0.5px;
+  
+}
+
+
+.group-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+
+  width: 60px;
+  height: 3px;
+
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  border-radius: 2px;
 }
 
 .subsidiary-grid {

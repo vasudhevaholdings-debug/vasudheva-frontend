@@ -31,7 +31,7 @@ export default function Leadership() {
      
 
       {/* Governance Framing */}
-      <section className="resume-section">
+      {/* <section className="resume-section">
         <div className="section-content">
           <h3 className="resume-heading diamond-heading">◆ Governance Framing</h3>
           <p className="resume-text">
@@ -72,7 +72,7 @@ export default function Leadership() {
             </tbody>
           </table>
         </div>
-      </section>
+      </section> */}
 
       {/* Founding Leadership Profiles - Resume-Style Cards */}
       <section className="resume-section founding-leadership">
@@ -872,7 +872,7 @@ organisations can scale sustainably "</blockquote>
      
 
       {/* Governance Principles */}
-      <section className="resume-section">
+      {/* <section className="resume-section">
         <div className="section-content">
           
           <ul className="resume-list diamond-list">
@@ -883,7 +883,7 @@ organisations can scale sustainably "</blockquote>
             <li>Long-term knowledge stewardship</li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       
 
