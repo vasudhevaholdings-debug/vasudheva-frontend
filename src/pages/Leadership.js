@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import "../stakeholderlayout.css";
-// import logo from "../assets/logos/parentLogo.png";
+import pattern from "../assets/hero/pattern.png";
+
+// Photo imports (adjust paths as needed)
 import shashankPhoto from "../assets/hero/shashank.jpeg";
-// Assuming additional photo imports; replace with actual paths if available
 import gauravPhoto from "../assets/hero/gaurav.jpeg";
 import vivekPhoto from "../assets/hero/vivek.jpeg";
 import amulPhoto from "../assets/hero/amul.jpeg";
@@ -17,127 +18,79 @@ export default function Leadership() {
   };
 
   return (
-    <div className="leadership-page resume-style">
-      {/* Header with Logo and Title */}
-      <header className="resume-header">
-        {/* <img src={logo} alt="Vasudheva Group Logo" className="resume-logo" /> */}
-        <div className="header-text">
-          {/* <h1 className="resume-title">Vasudheva Strategic Innovations Pvt Ltd</h1> */}
-          <h2 className="resume-subtitle">Leadership & Founding Team</h2>
-          <p className="resume-tagline">Stewards of Governance, Knowledge & Institutional Integrity</p>
-        </div>
+    <div className="leadership-container">
+      <header className="leadership-header">
+        <h1>Leadership & Founding Team</h1>
+        <p className="leadership-tagline">
+          Stewards of Governance, Knowledge & Institutional Integrity
+        </p>
       </header>
 
-     
+      <section
+  className="team-overview"
+style={{
+  backgroundColor: "white"
+}}
+>
+        {/* ============================================= */}
+        {/* Shashank Singh */}
+        {/* ============================================= */}
+        <div className="team-member-card">
+          <div className="member-photo-wrapper">
+            <img src={shashankPhoto} alt="Shashank Singh" className="member-photo" />
+          </div>
+          <div className="member-info">
+            <h3 className="member-name">Shashank Singh</h3>
+            <p className="member-title">Principal Founder, Chief Architect & Lead Strategist</p>
+            <p className="member-subtitle">The Vasudheva Group</p>
+            <p className="member-teaser">IIM Alumni | Economics & Public Policy | Systems thinker & institution builder</p>
 
-      {/* Governance Framing */}
-      {/* <section className="resume-section">
-        <div className="section-content">
-          <h3 className="resume-heading diamond-heading">◆ Governance Framing</h3>
-          <p className="resume-text">
-            The Vasudheva Group is guided by a founding team committed to building institutions that 
-            serve society through ethical governance, knowledge systems, and integrated solutions.
-          </p>
-          <p className="resume-text">The leadership functions as custodians of:</p>
-          <ul className="resume-list diamond-list">
-            <li>Governance frameworks</li>
-            <li>Institutional doctrine</li>
-            <li>Intellectual stewardship</li>
-            <li>Cross-subsidiary integration</li>
-            <li>Public-interest alignment</li>
-          </ul>
-
-          <h4 className="resume-subheading diamond-heading">Leadership Structure</h4>
-          <p className="resume-text">The Group follows a governance-led leadership model:</p>
-          <table className="resume-table leadership-table">
-            <thead>
-              <tr>
-                <th>Level</th>
-                <th>Role</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Holdings Leadership</td>
-                <td>Governance, doctrine, integration</td>
-              </tr>
-              <tr>
-                <td>Subsidiary Leadership</td>
-                <td>Domain execution & delivery</td>
-              </tr>
-              <tr>
-                <td>Advisory & Expert Network</td>
-                <td>Specialist knowledge & review</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section> */}
-
-      {/* Founding Leadership Profiles - Resume-Style Cards */}
-      <section className="resume-section founding-leadership">
-        <h3 className="resume-heading diamond-heading">◆ Founding Leadership</h3>
-        
-        {/* Shashank Singh Profile */}
-        <div className="resume-card founder-card">
-          <img src={shashankPhoto} alt="Shashank Singh" className="resume-photo founder-photo" />
-          <div className="resume-card-content founder-info">
-            <h4 className="resume-name">Shashank Singh</h4>
-            <p className="resume-title">
-              Principal Founder, Chief Architect & Lead Strategist<br />
-              The Vasudheva Group
-            </p>
-            <p className="resume-role">
-              <strong>Group Role:</strong> Chief Architect of Governance & Institutional Design
-            </p>
-            <p className="resume-credentials">
-              IIM Alumni | Economics & Public Policy | Business Strategist | Independent Researcher | Entrepreneur
-            </p>
-            
-            <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
-            <blockquote className="resume-quote">
-              “Institutions shape societies. Systems shape institutions. Ideas shape systems.”<br />
-              — Shashank Singh
-            </blockquote>
-            <p className="resume-text">
-             The idea of the Vasudheva Group emerged from a simple but profound observation: many
-institutional failures are not due to lack of intent or resources, but due to fragmented
-systems, weak governance, and the absence of integrated thinking. Across public
-institutions, educational systems, enterprises, and communities, I witnessed a recurring
-pattern — solutions were implemented in isolation, knowledge remained siloed, and
-long-term sustainability was rarely embedded in design.
-Vasudheva was conceptualised as a governance-led institutional ecosystem to address this
-systemic gap. Our model integrates research, education, communication, and knowledge
-stewardship under a unified framework so that institutions can design, implement, and
-sustain solutions with clarity, accountability, and public trust.
-As Founder, my role is not to centralise authority but to steward governance principles that
-ensure ethical integrity, evidence-based decision-making, and long-term societal benefit. The
-strength of this Group lies in its collective leadership — professionals who bring field
-intelligence, engagement governance, operational discipline, and technical expertise into a
-coherent institutional architecture.
-We are committed to building systems that outlast individuals — systems that preserve
-knowledge, strengthen institutions, and contribute to a more just, informed, and resilient
-society
-            </p>
-            <button 
-              className="read-more-btn" 
+            <button
+              className="details-toggle"
               onClick={() => toggleExpanded('shashank')}
             >
-              {expanded['shashank'] ? 'Read Less' : 'Read More'}
+              {expanded['shashank'] ? 'Show less' : 'Read more'}
             </button>
+
             {expanded['shashank'] && (
-              <div className="expanded-content">
+              <div className="member-expanded">
+                <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
+                <blockquote className="resume-quote">
+                  “Institutions shape societies. Systems shape institutions. Ideas shape systems.”<br />
+                  — Shashank Singh
+                </blockquote>
+                <p className="resume-text">
+                  The idea of the Vasudheva Group emerged from a simple but profound observation: many
+                  institutional failures are not due to lack of intent or resources, but due to fragmented
+                  systems, weak governance, and the absence of integrated thinking. Across public
+                  institutions, educational systems, enterprises, and communities, I witnessed a recurring
+                  pattern — solutions were implemented in isolation, knowledge remained siloed, and
+                  long-term sustainability was rarely embedded in design.
+                  Vasudheva was conceptualised as a governance-led institutional ecosystem to address this
+                  systemic gap. Our model integrates research, education, communication, and knowledge
+                  stewardship under a unified framework so that institutions can design, implement, and
+                  sustain solutions with clarity, accountability, and public trust.
+                  As Founder, my role is not to centralise authority but to steward governance principles that
+                  ensure ethical integrity, evidence-based decision-making, and long-term societal benefit. The
+                  strength of this Group lies in its collective leadership — professionals who bring field
+                  intelligence, engagement governance, operational discipline, and technical expertise into a
+                  coherent institutional architecture.
+                  We are committed to building systems that outlast individuals — systems that preserve
+                  knowledge, strengthen institutions, and contribute to a more just, informed, and resilient
+                  society
+                </p>
+
                 <h5 className="resume-section-header section-icon">◆ About the Founder</h5>
                 <p className="resume-text">
                   Shashank Singh is an entrepreneur, systems thinker, and institution builder dedicated to
-                designing knowledge-driven enterprises that address complex socio-economic challenges.
-                As the Principal Founder and Chief Architect of The Vasudheva Group, he leads a
-                multidisciplinary ecosystem focused on research-led consulting, education innovation,
-                media, and publishing.
-                He is driven by the philosophy of “Thinking From The Scratch…”, emphasizing
-                foundational thinking, ethical leadership, and sustainable development. His work integrates
-                economics, governance, technology, and human development to create scalable and
-                socially responsible institutional models.
+                  designing knowledge-driven enterprises that address complex socio-economic challenges.
+                  As the Principal Founder and Chief Architect of The Vasudheva Group, he leads a
+                  multidisciplinary ecosystem focused on research-led consulting, education innovation,
+                  media, and publishing.
+                  He is driven by the philosophy of “Thinking From The Scratch…”, emphasizing
+                  foundational thinking, ethical leadership, and sustainable development. His work integrates
+                  economics, governance, technology, and human development to create scalable and
+                  socially responsible institutional models.
                 </p>
 
                 <h5 className="resume-section-header section-icon">◆ Vision & Purpose</h5>
@@ -147,9 +100,11 @@ society
                   <li>Democratize access to knowledge and strategic thinking</li>
                   <li>Enable organizations to solve complex challenges sustainably</li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">◆ The Founding Philosophy</h5>
                 <p className="resume-text">The Vasudheva Group is built on a systems-thinking doctrine that views knowledge as
-                infrastructure and institutions as engines of societal progress.</p>
+                  infrastructure and institutions as engines of societal progress.</p>
+
                 <h5 className="resume-section-header section-icon">◆ Guiding Principles</h5>
                 <ul className="resume-list diamond-list">
                   <li>Systems Thinking: Integrated solutions over fragmented approaches</li>
@@ -157,33 +112,36 @@ society
                   <li>Ethical Enterprise: Profit with purpose and responsibility</li>
                   <li>Local Roots, Global Relevance: Contextual solutions with universal value</li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">◆ Building the Vasudheva Group</h5>
                 <p className="resume-text">Shashank Singh conceptualized The Vasudheva Group as an integrated ecosystem of
-                specialized entities working in synergy:</p>
-             <ul className="resume-list diamond-list">
+                  specialized entities working in synergy:</p>
+                <ul className="resume-list diamond-list">
                   <li>Strategic Research & Consulting — enabling informed decision-making</li>
                   <li>Education Innovation — transforming learning systems</li>
                   <li>Media & Knowledge Dissemination — amplifying ideas and insights</li>
                   <li>Publishing & Intellectual Property — preserving and sharing knowledge</li>
                 </ul>
                 <p className="resume-text">This architecture enables cross-sectoral collaboration and scalable impact</p>
+
                 <h5 className="resume-section-header section-icon">◆ Leadership Approach</h5>
                 <p className="resume-text">Shashank’s leadership style combines analytical rigor with human-centric values.</p>
+
                 <h5 className="resume-section-header section-icon">◆ Leadership Traits</h5>
-                 <ul className="resume-list diamond-list">
+                <ul className="resume-list diamond-list">
                   <li>Vision-driven and mission-focused</li>
                   <li>Research-led decision making</li>
                   <li>Ethical and socially conscious</li>
                   <li>Collaborative ecosystem builder</li>
                 </ul>
-                 <h5 className="resume-section-header section-icon">◆ Core Belief</h5>
-                 <ul className="resume-list diamond-list">
+
+                <h5 className="resume-section-header section-icon">◆ Core Belief</h5>
+                <ul className="resume-list diamond-list">
                   <li>Institutions create enduring impact</li>
                   <li>Knowledge empowers societies</li>
                   <li>Sustainable development requires systems thinking</li>
-                  
                 </ul>
-              
+
                 <h5 className="resume-section-header section-icon">◆ Areas of Focus</h5>
                 <ul className="resume-list diamond-list">
                   <li>Institutional design & governance</li>
@@ -192,17 +150,18 @@ society
                   <li>Knowledge dissemination & media strategy</li>
                   <li>Sustainable and inclusive development</li>
                 </ul>
-                  <h5 className="resume-section-header section-icon">◆ Commitment to Society</h5>
+
+                <h5 className="resume-section-header section-icon">◆ Commitment to Society</h5>
                 <p className="resume-text">The Vasudheva Group reflects Shashank’s commitment to building enterprises that contribute to:</p>
-                 <ul className="resume-list diamond-list">
+                <ul className="resume-list diamond-list">
                   <li>Inclusive economic development</li>
                   <li>Institutional strengthening in Tier-2 and Tier-3 regions</li>
                   <li>Ethical and responsible business practices</li>
                   <li>Knowledge accessibility and empowerment</li>
-                  
                 </ul>
+
                 <h5 className="resume-section-header section-icon">◆ Personal Philosophy</h5>
-                  <ul className="resume-list diamond-list">
+                <ul className="resume-list diamond-list">
                   <li>Build institutions,not just businesses</li>
                   <li>Knowledge must serve society</li>
                   <li>Sustainability begins with systems thinking</li>
@@ -219,55 +178,63 @@ society
           </div>
         </div>
 
-        {/* Gaurav Dwivedi Profile */}
-        <div className="resume-card founder-card">
-          <img src={gauravPhoto} alt="Gaurav Dwivedi" className="resume-photo founder-photo" />
-          <div className="resume-card-content founder-info">
-            <h4 className="resume-name">Gaurav Dwivedi</h4>
-            <p className="resume-title">Co-Founder, The Vasudheva Group</p>
-            <p className="resume-credentials">
-              Tech Graduate | Entrepreneur & Independent Researcher | Social Equity & Institutional Development Advocate
-            </p>
-            
-            <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
-            <p className="resume-text">
-              Institutions often design policies and systems from the top, but their success is determined
-            on the ground. My work with the Vasudheva Group focuses on ensuring that our institutional
-            designs are rooted in empirical realities, stakeholder perspectives, and field-level evidence.
-            From grassroots entrepreneurs to educational institutions and community networks, I have
-            seen how local contexts shape outcomes. Data collected without context can mislead
-            decision-making, and policies designed without field validation can fail in implementation.
-            This is why we have built rigorous field research protocols and ground intelligence systems
-            within the Group — to ensure that our recommendations are not theoretical abstractions but
-            practical, context-sensitive solutions.
-            As a founding member, I see Vasudheva as a bridge between institutional intent and ground
-            realities. Our commitment is to listen before we design, validate before we recommend, and
-            learn continuously from the communities and stakeholders we serve.
-            By grounding institutional transformation in real-world evidence, we aim to create solutions
-            that are not only effective but also equitable and sustainable.</p>
-            <button 
-              className="read-more-btn" 
+        {/* ============================================= */}
+        {/* Gaurav Dwivedi */}
+        {/* ============================================= */}
+        <div className="team-member-card">
+          <div className="member-photo-wrapper">
+            <img src={gauravPhoto} alt="Gaurav Dwivedi" className="member-photo" />
+          </div>
+          <div className="member-info">
+            <h3 className="member-name">Gaurav Dwivedi</h3>
+            <p className="member-title">Co-Founder</p>
+            <p className="member-subtitle">The Vasudheva Group</p>
+            <p className="member-teaser">Tech Graduate | Entrepreneur & Independent Researcher | Social Equity Advocate</p>
+
+            <button
+              className="details-toggle"
               onClick={() => toggleExpanded('gaurav')}
             >
-              {expanded['gaurav'] ? 'Read Less' : 'Read More'}
+              {expanded['gaurav'] ? 'Show less' : 'Read more'}
             </button>
+
             {expanded['gaurav'] && (
-              <div className="expanded-content">
+              <div className="member-expanded">
+                <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
+                <p className="resume-text">
+                  Institutions often design policies and systems from the top, but their success is determined
+                  on the ground. My work with the Vasudheva Group focuses on ensuring that our institutional
+                  designs are rooted in empirical realities, stakeholder perspectives, and field-level evidence.
+                  From grassroots entrepreneurs to educational institutions and community networks, I have
+                  seen how local contexts shape outcomes. Data collected without context can mislead
+                  decision-making, and policies designed without field validation can fail in implementation.
+                  This is why we have built rigorous field research protocols and ground intelligence systems
+                  within the Group — to ensure that our recommendations are not theoretical abstractions but
+                  practical, context-sensitive solutions.
+                  As a founding member, I see Vasudheva as a bridge between institutional intent and ground
+                  realities. Our commitment is to listen before we design, validate before we recommend, and
+                  learn continuously from the communities and stakeholders we serve.
+                  By grounding institutional transformation in real-world evidence, we aim to create solutions
+                  that are not only effective but also equitable and sustainable.
+                </p>
+
                 <h5 className="resume-section-header section-icon">◆ Profile Overview</h5>
                 <p className="resume-text">
                   Gaurav Dwivedi is a co-founder of The Vasudheva Group, a knowledge-driven institutional
-                ecosystem dedicated to building inclusive systems for societal progress, cooperation, and
-                sustainable coexistence. With an interdisciplinary orientation spanning technology, social
-                sciences, and institutional studies, he contributes to designing frameworks that integrate
-                knowledge, governance, and community development.
-                Rooted in scientific reasoning and guided by ethical values, his work focuses on social
-                equity, child welfare, institutional development, and the democratization of knowledge. He
-                represents a new generation of institution builders committed to harmonizing technological
-                advancement with human well-being.
+                  ecosystem dedicated to building inclusive systems for societal progress, cooperation, and
+                  sustainable coexistence. With an interdisciplinary orientation spanning technology, social
+                  sciences, and institutional studies, he contributes to designing frameworks that integrate
+                  knowledge, governance, and community development.
+                  Rooted in scientific reasoning and guided by ethical values, his work focuses on social
+                  equity, child welfare, institutional development, and the democratization of knowledge. He
+                  represents a new generation of institution builders committed to harmonizing technological
+                  advancement with human well-being.
                 </p>
+
                 <h5 className="resume-section-header section-icon">◆ Role at The Vasudheva Group</h5>
                 <p className="resume-text">As a founding member, Gaurav plays a strategic and operational role in shaping the group’s
-                intellectual direction and institutional architecture.</p>
+                  intellectual direction and institutional architecture.</p>
+
                 <h5 className="resume-section-header section-icon">◆ Key Responsibilities</h5>
                 <ul className="resume-list diamond-list">
                   <li>Co-designing integrated organizational systems and governance frameworks</li>
@@ -276,12 +243,12 @@ society
                   <li>Strengthening institutional partnerships and community engagement</li>
                   <li>Contributing to knowledge dissemination through research, media, and publishing platforms</li>
                 </ul>
-                 <h5 className="resume-section-header section-icon">◆ Institutional Vision Contribution</h5>
-                 <p className="resume-text">Gaurav contributes to the development of the Vasudheva ecosystem through its core
-                institutions:</p>
+
+                <h5 className="resume-section-header section-icon">◆ Institutional Vision Contribution</h5>
+                <p className="resume-text">Gaurav contributes to the development of the Vasudheva ecosystem through its core
+                  institutions:</p>
                 <ul className="resume-list diamond-list">
-                  <li><strong>Vasudheva Strategic Innovations :</strong>Enabling effective decision-making through research and consulting across individuals,
-                organizations, and governments.</li>
+                  <li><strong>Vasudheva Strategic Innovations :</strong> Enabling effective decision-making through research and consulting across individuals, organizations, and governments.</li>
                   <li><strong>Vasudheva EduInnovation:</strong> Reimagining learning systems and pedagogies for equitable and future-ready education.</li>
                   <li><strong>Vasudheva Media:</strong> Innovating how knowledge, values, and information reach and empower society.</li>
                   <li><strong>Vasudheva Publishing:</strong> Transforming publishing models to expand opportunities for authors, scholars, and artists.</li>
@@ -307,7 +274,8 @@ society
                 <h5 className="resume-section-header section-icon">◆ Values & Philosphical Orientation</h5>
                 <p className="resume-text">Liberal • Secular • Democratic • Inclusive • Scientific • Spiritual. </p>
                 <p className="resume-text">Gaurav believes in harmonizing rational inquiry with ethical responsibility to foster
-                cooperation, equity, and sustainable societal evolution.</p>
+                  cooperation, equity, and sustainable societal evolution.</p>
+
                 <h5 className="resume-section-header section-icon">◆ Leadership & Psychological Profile</h5>
                 <h5 className="resume-section-header section-icon">Leadership Style </h5>
                 <ul className="resume-list diamond-list">
@@ -323,6 +291,7 @@ society
                   <li> Integrates ethics with execution </li>
                   <li> Encourages interdisciplinary thinking </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">◆ Vision for Society </h5>
                 <p className="resume-text">Gaurav envisions a society where: </p>
                 <ul className="resume-list diamond-list">
@@ -348,63 +317,64 @@ society
           </div>
         </div>
 
-        {/* Vivek Kumar Ojha Profile */}
-        <div className="resume-card founder-card">
-          <img src={vivekPhoto} alt="Vivek Kumar Ojha" className="resume-photo founder-photo" />
-          <div className="resume-card-content founder-info">
-            <h4 className="resume-name">Mr. Vivek Kumar Ojha</h4>
-            <p className="resume-title">
-              Founding Team Member & National Spokesperson<br />
-              Head — Cultural & Spiritual Consulting, The Vasudheva Group
-            </p>
-            
-            <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
-            {/* <blockquote className="resume-quote">
-              “True progress is achieved when knowledge enlightens systems, ethics guide actions, and culture nurtures harmony. Our civilizational wisdom offers timeless principles for building a just, sustainable, and compassionate society.”
-            </blockquote> */}
-            <p className="resume-text">
-              Institutional engagements succeed when expectations are clear, responsibilities are defined,
-            and communication is transparent. My role within the Vasudheva Group is to ensure that
-            every engagement is governed with clarity, accountability, and mutual trust.
-            Too often, organisations enter partnerships without a shared understanding of scope,
-            outcomes, or constraints. This leads to misaligned expectations, scope creep, and strained
-            relationships. To address this, we have developed structured engagement governance
-            frameworks — from onboarding protocols to agreement design and stakeholder
-            communication systems — that protect both the client and the integrity of our work.
-            As a founding member, I believe that trust is built through consistency, transparency, and
-            responsible commitments. Our aim is not merely to deliver services but to build long-term
-            partnerships grounded in governance and shared purpose.
-            By ensuring that engagements are structured and ethically aligned, we create the conditions
-            necessary for meaningful and sustainable institutional transformation.
-              </p>
-            <blockquote className="resume-quote">
-              “True progress is achieved when knowledge enlightens systems, ethics guide actions, and 
-              culture nurtures harmony. Our civilizational wisdom offers timeless principles for building a 
-              just, sustainable, and compassionate society.” 
-            </blockquote>
-            <button 
-              className="read-more-btn" 
+        {/* ============================================= */}
+        {/* Vivek Kumar Ojha */}
+        {/* ============================================= */}
+        <div className="team-member-card">
+          <div className="member-photo-wrapper">
+            <img src={vivekPhoto} alt="Vivek Kumar Ojha" className="member-photo" />
+          </div>
+          <div className="member-info">
+            <h3 className="member-name">Mr. Vivek Kumar Ojha</h3>
+            <p className="member-title">Founding Team Member & National Spokesperson</p>
+            <p className="member-subtitle">Head — Cultural & Spiritual Consulting</p>
+
+            <button
+              className="details-toggle"
               onClick={() => toggleExpanded('vivek')}
             >
-              {expanded['vivek'] ? 'Read Less' : 'Read More'}
+              {expanded['vivek'] ? 'Show less' : 'Read more'}
             </button>
+
             {expanded['vivek'] && (
-              <div className="expanded-content">
+              <div className="member-expanded">
+                <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
+                <p className="resume-text">
+                  Institutional engagements succeed when expectations are clear, responsibilities are defined,
+                  and communication is transparent. My role within the Vasudheva Group is to ensure that
+                  every engagement is governed with clarity, accountability, and mutual trust.
+                  Too often, organisations enter partnerships without a shared understanding of scope,
+                  outcomes, or constraints. This leads to misaligned expectations, scope creep, and strained
+                  relationships. To address this, we have developed structured engagement governance
+                  frameworks — from onboarding protocols to agreement design and stakeholder
+                  communication systems — that protect both the client and the integrity of our work.
+                  As a founding member, I believe that trust is built through consistency, transparency, and
+                  responsible commitments. Our aim is not merely to deliver services but to build long-term
+                  partnerships grounded in governance and shared purpose.
+                  By ensuring that engagements are structured and ethically aligned, we create the conditions
+                  necessary for meaningful and sustainable institutional transformation.
+                </p>
+                <blockquote className="resume-quote">
+                  “True progress is achieved when knowledge enlightens systems, ethics guide actions, and
+                  culture nurtures harmony. Our civilizational wisdom offers timeless principles for building a
+                  just, sustainable, and compassionate society.”
+                </blockquote>
+
                 <h5 className="resume-section-header section-icon">◆ Profile Overview</h5>
                 <p className="resume-text">
                   Mr. Vivek Kumar Ojha is a founding team member and national spokesperson of The
-                Vasudheva Group, where he leads Cultural & Spiritual Consulting. A scholar of Indian
-                knowledge systems and a public communicator, he plays a central role in articulating the
-                group’s philosophical foundations and translating civilizational wisdom into contemporary
-                institutional frameworks.
-                His work integrates ethics, culture, spirituality, and social responsibility into governance,
-                education, and community initiatives—strengthening the moral and cultural foundations of
-                modern organizations.
+                  Vasudheva Group, where he leads Cultural & Spiritual Consulting. A scholar of Indian
+                  knowledge systems and a public communicator, he plays a central role in articulating the
+                  group’s philosophical foundations and translating civilizational wisdom into contemporary
+                  institutional frameworks.
+                  His work integrates ethics, culture, spirituality, and social responsibility into governance,
+                  education, and community initiatives—strengthening the moral and cultural foundations of
+                  modern organizations.
                 </p>
-               
-               <h5 className="resume-section-header section-icon">◆ Role in The Vasudheva Group </h5>
+
+                <h5 className="resume-section-header section-icon">◆ Role in The Vasudheva Group </h5>
                 <h5 className="resume-section-header section-icon">National Spokesperson </h5>
-                <p className="resume-text">Mr. Ojha represents the group’s vision in public forums, media engagements, academic 
+                <p className="resume-text">Mr. Ojha represents the group’s vision in public forums, media engagements, academic
                   platforms, and community dialogues. </p>
                 <p className="resume-text"><strong>Key Contributions: </strong></p>
                 <ul className="resume-list diamond-list">
@@ -415,7 +385,7 @@ society
                 </ul>
 
                 <h5 className="resume-section-header section-icon">Head — Cultural & Spiritual Consulting </h5>
-                <p className="resume-text">He leads initiatives that integrate Indian civilizational wisdom into institutional systems and 
+                <p className="resume-text">He leads initiatives that integrate Indian civilizational wisdom into institutional systems and
                   social programs. </p>
                 <p className="resume-text"><strong>Focus Areas: </strong></p>
                 <ul className="resume-list diamond-list">
@@ -424,10 +394,11 @@ society
                   <li> Value-based education models </li>
                   <li> Spiritual well-being and leadership </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">◆ Vision & Philosophy </h5>
                 <p className="resume-text"><strong>Core Belief</strong> </p>
                 <p className="resume-text">“Sustainable systems emerge when knowledge, ethics, and culture evolve together.” </p>
-                <p className="resume-text">Mr. Ojha advocates a development paradigm that balances material progress with spiritual 
+                <p className="resume-text">Mr. Ojha advocates a development paradigm that balances material progress with spiritual
                   and cultural depth. His approach emphasizes: </p>
                 <ul className="resume-list diamond-list">
                   <li> Harmony between tradition and modernity </li>
@@ -435,7 +406,8 @@ society
                   <li> Social cohesion through shared cultural values </li>
                   <li> Inner development as a prerequisite for societal progress </li>
                 </ul>
-               <h5 className="resume-section-header section-icon">◆ Areas of Expertise </h5>
+
+                <h5 className="resume-section-header section-icon">◆ Areas of Expertise </h5>
                 <h5 className="resume-section-header section-icon">Cultural & Civilizational Studies </h5>
                 <ul className="resume-list diamond-list">
                   <li> Indian knowledge systems </li>
@@ -511,7 +483,7 @@ society
                   <li> Ethical leadership training programs </li>
                   <li> Community harmony and dialogue initiatives </li>
                 </ul>
-                <p className="resume-text"><strong>Collaboration Areas:</strong> Education | Governance | Community Development | Cultural 
+                <p className="resume-text"><strong>Collaboration Areas:</strong> Education | Governance | Community Development | Cultural
                   Diplomacy | Spiritual Well-being </p>
 
                 <h5 className="resume-section-header section-icon">◆ Quick Facts </h5>
@@ -525,63 +497,70 @@ society
 
                 <h5 className="resume-section-header section-icon">◆ Connect & Collaborate </h5>
                 <p className="resume-text">
-                  Vivek welcomes collaboration with educators, policymakers, entrepreneurs, researchers, 
-                  and institutions committed to building a more equitable and sustainable future. 
+                  Vivek welcomes collaboration with educators, policymakers, entrepreneurs, researchers,
+                  and institutions committed to building a more equitable and sustainable future.
                 </p>
                 <p className="resume-text">
-                  Together, we can design systems that enable joyful coexistence. 
+                  Together, we can design systems that enable joyful coexistence.
                 </p>
               </div>
             )}
           </div>
         </div>
-        {/* Amul Patel Profile */}
-        <div className="resume-card founder-card">
-          <img src={amulPhoto} alt="Amul Patel" className="resume-photo founder-photo" />
-          <div className="resume-card-content founder-info">
-            <h4 className="resume-name">Mr. Amul Patel</h4>
-            <p className="resume-title">
-              Founding Team Member & Head – Operations & IT<br />
-              The Vasudheva Group
-            </p>
-            <p className="resume-credentials">Entrepreneur, Digital Infrastructure Architect & Data Enthusiast</p>
-            
-            <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
-            <p className="resume-text">
-              "“Our goal is to build systems that empower people, institutions, and communities to function
-harmoniously. Through responsible technology and integrated processes, we aim to enable
-cooperation, reduce inefficiencies, and contribute to a more inclusive and sustainable
-society".
- <blockquote className="resume-quote">As a founding member, I view operations as the backbone of institutional credibility. When
-systems function reliably and processes are transparent, stakeholders gain confidence, and
-organisations can scale sustainably "</blockquote>
-              </p>
-            <button 
-              className="read-more-btn" 
+
+        {/* ============================================= */}
+        {/* Amul Patel */}
+        {/* ============================================= */}
+        <div className="team-member-card">
+          <div className="member-photo-wrapper">
+            <img src={amulPhoto} alt="Amul Patel" className="member-photo" />
+          </div>
+          <div className="member-info">
+            <h3 className="member-name">Mr. Amul Patel</h3>
+            <p className="member-title">Founding Team Member & Head – Operations & IT</p>
+            <p className="member-subtitle">The Vasudheva Group</p>
+
+            <button
+              className="details-toggle"
               onClick={() => toggleExpanded('amul')}
             >
-              {expanded['amul'] ? 'Read Less' : 'Read More'}
+              {expanded['amul'] ? 'Show less' : 'Read more'}
             </button>
+
             {expanded['amul'] && (
-              <div className="expanded-content">
+              <div className="member-expanded">
+                <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
+                <p className="resume-text">
+                  “Our goal is to build systems that empower people, institutions, and communities to function
+                  harmoniously. Through responsible technology and integrated processes, we aim to enable
+                  cooperation, reduce inefficiencies, and contribute to a more inclusive and sustainable
+                  society".
+                </p>
+                <blockquote className="resume-quote">
+                  As a founding member, I view operations as the backbone of institutional credibility. When
+                  systems function reliably and processes are transparent, stakeholders gain confidence, and
+                  organisations can scale sustainably
+                </blockquote>
+
                 <h5 className="resume-section-header section-icon">◆ About The Founder</h5>
                 <p className="resume-text">
                   Mr. Amul Patel is a Founding Team Member and Head of Operations & IT at The Vasudheva
-                Group, where he leads the development of integrated systems, digital infrastructure, and
-                operational frameworks that enable the group’s multi-sector initiatives to function efficiently
-                and scale sustainably.
-                A technology professional and systems thinker, he is committed to leveraging data, digital
-                tools, and process innovation to enhance cooperation, minimize systemic inefficiencies, and
-                support the Group’s mission of <strong>“Towards Joyful Coexistence — For Knowledge | For 
-                  System | For Society.”</strong>
+                  Group, where he leads the development of integrated systems, digital infrastructure, and
+                  operational frameworks that enable the group’s multi-sector initiatives to function efficiently
+                  and scale sustainably.
+                  A technology professional and systems thinker, he is committed to leveraging data, digital
+                  tools, and process innovation to enhance cooperation, minimize systemic inefficiencies, and
+                  support the Group’s mission of <strong>“Towards Joyful Coexistence — For Knowledge | For
+                    System | For Society.”</strong>
                 </p>
-  <h5 className="resume-section-header section-icon">◆ Vision & Philosophy </h5>
-                <p className="resume-text">Mr. Patel believes that technology and systems should serve as instruments of societal 
-                  progress — enabling institutions, organizations, and communities to function harmoniously 
+
+                <h5 className="resume-section-header section-icon">◆ Vision & Philosophy </h5>
+                <p className="resume-text">Mr. Patel believes that technology and systems should serve as instruments of societal
+                  progress — enabling institutions, organizations, and communities to function harmoniously
                   while remaining sensitive to environmental and social ecosystems. </p>
                 <blockquote className="resume-quote">
-                  “Integrated systems and responsible technology can reduce friction, enhance 
-                  cooperation, and enable inclusive progress.” 
+                  “Integrated systems and responsible technology can reduce friction, enhance
+                  cooperation, and enable inclusive progress.”
                 </blockquote>
                 <p className="resume-text">His work reflects a commitment to: </p>
                 <ul className="resume-list diamond-list">
@@ -592,7 +571,7 @@ organisations can scale sustainably "</blockquote>
                 </ul>
 
                 <h5 className="resume-section-header section-icon">◆ Role in The Vasudheva Group </h5>
-                <p className="resume-text">As Head of Operations & IT, Mr. Patel serves as the digital and operational backbone of 
+                <p className="resume-text">As Head of Operations & IT, Mr. Patel serves as the digital and operational backbone of
                   the Group. </p>
                 <p className="resume-text"><strong>Key Responsibilities </strong></p>
                 <ul className="resume-list diamond-list">
@@ -612,21 +591,25 @@ organisations can scale sustainably "</blockquote>
 
                 <h5 className="resume-section-header section-icon">◆ Contributions Across Group Entities </h5>
                 <p className="resume-text">Mr. Patel plays a pivotal role in integrating systems across the Group’s core entities: </p>
+
                 <h5 className="resume-section-header section-icon">Vasudheva Strategic Innovations </h5>
                 <ul className="resume-list diamond-list">
                   <li> Data systems for research and consulting workflows </li>
                   <li> Digital tools for analytics and reporting </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">Vasudheva EduInnovation </h5>
                 <ul className="resume-list diamond-list">
                   <li> Technology-enabled learning systems </li>
                   <li> Digital platforms for educational delivery </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">Vasudheva Media </h5>
                 <ul className="resume-list diamond-list">
                   <li> Web infrastructure and digital content systems </li>
                   <li> Visual and digital communication support </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">Vasudheva Publishing </h5>
                 <ul className="resume-list diamond-list">
                   <li> Digital publishing workflows </li>
@@ -636,8 +619,8 @@ organisations can scale sustainably "</blockquote>
                 <h5 className="resume-section-header section-icon">◆ Professional Experience </h5>
                 <p className="resume-text"><strong>Infosys, Bengaluru </strong></p>
                 <p className="resume-text"><strong>Data Systems Specialist (2023–2024) </strong></p>
-                <p className="resume-text">At Infosys, Mr. Patel worked on enterprise data systems with specialization in data cloning 
-                  and data structure management. His experience strengthened his expertise in data 
+                <p className="resume-text">At Infosys, Mr. Patel worked on enterprise data systems with specialization in data cloning
+                  and data structure management. His experience strengthened his expertise in data
                   accuracy, system reliability, and large-scale information handling. </p>
                 <p className="resume-text"><strong>Key Areas: </strong></p>
                 <ul className="resume-list diamond-list">
@@ -668,6 +651,7 @@ organisations can scale sustainably "</blockquote>
                   <li> IT Infrastructure Planning </li>
                   <li> Digital Systems Integration </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">Operations & Process Design </h5>
                 <ul className="resume-list diamond-list">
                   <li> Workflow Optimization </li>
@@ -675,6 +659,7 @@ organisations can scale sustainably "</blockquote>
                   <li> SEO & Digital Operations </li>
                   <li> Cross-functional Coordination </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">Creative & Digital Skills </h5>
                 <ul className="resume-list diamond-list">
                   <li> Graphic Designing </li>
@@ -682,6 +667,7 @@ organisations can scale sustainably "</blockquote>
                   <li> Visual Communication </li>
                   <li> UI/UX Support </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">Strategic Capabilities </h5>
                 <ul className="resume-list diamond-list">
                   <li> Systems Thinking </li>
@@ -692,6 +678,7 @@ organisations can scale sustainably "</blockquote>
 
                 <h5 className="resume-section-header section-icon">◆ Leadership & Work Ethos </h5>
                 <p className="resume-text">Mr. Patel’s leadership approach is rooted in execution excellence and systems thinking. </p>
+
                 <h5 className="resume-section-header section-icon">Leadership Style </h5>
                 <ul className="resume-list diamond-list">
                   <li> Process-driven and detail-oriented </li>
@@ -699,6 +686,7 @@ organisations can scale sustainably "</blockquote>
                   <li> Quiet execution with measurable impact </li>
                   <li> Infrastructure-first approach </li>
                 </ul>
+
                 <h5 className="resume-section-header section-icon">Core Strengths </h5>
                 <ul className="resume-list diamond-list">
                   <li> Analytical precision </li>
@@ -714,7 +702,7 @@ organisations can scale sustainably "</blockquote>
                   <li> Technology exploration </li>
                   <li> Visual design & digital creativity </li>
                 </ul>
-                <p className="resume-text">These interests enhance his observational skills, creativity, and ability to design intuitive 
+                <p className="resume-text">These interests enhance his observational skills, creativity, and ability to design intuitive
                   systems. </p>
 
                 <h5 className="resume-section-header section-icon">◆ Strategic Role in the Vasudheva Vision </h5>
@@ -729,67 +717,69 @@ organisations can scale sustainably "</blockquote>
 
                 <h5 className="resume-section-header section-icon">◆ Connect & Collaborate </h5>
                 <p className="resume-text">
-                  Vivek welcomes collaboration with educators, policymakers, entrepreneurs, researchers, 
-                  and institutions committed to building a more equitable and sustainable future. 
+                  Amul welcomes collaboration with educators, policymakers, entrepreneurs, researchers,
+                  and institutions committed to building a more equitable and sustainable future.
                 </p>
                 <p className="resume-text">
-                  Together, we can design systems that enable joyful coexistence. 
+                  Together, we can design systems that enable joyful coexistence.
                 </p>
               </div>
             )}
           </div>
         </div>
-            
-       
 
-        {/* Suraj Mishra Profile */}
-        <div className="resume-card founder-card">
-          <img src={surajPhoto} alt="Suraj Mishra" className="resume-photo founder-photo" />
-          <div className="resume-card-content founder-info">
-            <h4 className="resume-name">Suraj Mishra</h4>
-            <p className="resume-title">
-              Founding Team Member, Strategic Associate and Head—People & Culture<br />
-              Institutional Vision & Social Development, The Vasudheva Group
-            </p>
-            
-            <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
-            <p className="resume-text">
-              Institutional transformation is not only a technical process; it is a human process that
-            requires coordination, facilitation, and sustained stakeholder engagement. My role within the
-            Vasudheva Group centres on supporting systems implementation and facilitating
-            collaboration among diverse stakeholders.
-            In complex engagements, progress often depends on effective communication, timely
-            coordination, and the ability to align multiple perspectives. By supporting implementation
-            teams, coordinating stakeholders, and ensuring that communication flows smoothly, I
-            contribute to creating an environment where systems can function as intended.
-            As a founding member, I believe that sustainable change emerges when people feel heard,
-            processes are inclusive, and collaboration is prioritised. Vasudheva’s strength lies in its
-            ability to integrate expertise with empathy — ensuring that institutional systems remain
-            responsive to the people they serve.
-            Through facilitation and systems support, we strive to make transformation processes
-            participatory, transparent, and resilient.
-              </p>
-            <button 
-              className="read-more-btn" 
+        {/* ============================================= */}
+        {/* Suraj Mishra */}
+        {/* ============================================= */}
+        <div className="team-member-card">
+          <div className="member-photo-wrapper">
+            <img src={surajPhoto} alt="Suraj Mishra" className="member-photo" />
+          </div>
+          <div className="member-info">
+            <h3 className="member-name">Suraj Mishra</h3>
+            <p className="member-title">Founding Team Member, Strategic Associate and Head—People & Culture</p>
+            <p className="member-subtitle">Institutional Vision & Social Development</p>
+
+            <button
+              className="details-toggle"
               onClick={() => toggleExpanded('suraj')}
             >
-              {expanded['suraj'] ? 'Read Less' : 'Read More'}
+              {expanded['suraj'] ? 'Show less' : 'Read more'}
             </button>
+
             {expanded['suraj'] && (
-              <div className="expanded-content">
+              <div className="member-expanded">
+                <h5 className="resume-section-header section-icon">◆ Founder's Message</h5>
+                <p className="resume-text">
+                  Institutional transformation is not only a technical process; it is a human process that
+                  requires coordination, facilitation, and sustained stakeholder engagement. My role within the
+                  Vasudheva Group centres on supporting systems implementation and facilitating
+                  collaboration among diverse stakeholders.
+                  In complex engagements, progress often depends on effective communication, timely
+                  coordination, and the ability to align multiple perspectives. By supporting implementation
+                  teams, coordinating stakeholders, and ensuring that communication flows smoothly, I
+                  contribute to creating an environment where systems can function as intended.
+                  As a founding member, I believe that sustainable change emerges when people feel heard,
+                  processes are inclusive, and collaboration is prioritised. Vasudheva’s strength lies in its
+                  ability to integrate expertise with empathy — ensuring that institutional systems remain
+                  responsive to the people they serve.
+                  Through facilitation and systems support, we strive to make transformation processes
+                  participatory, transparent, and resilient.
+                </p>
+
                 <h5 className="resume-section-header section-icon">◆ Profile Overview</h5>
                 <p className="resume-text">
                   Suraj Mishra is an emerging strategic thinker and socially conscious professional associated
-                with The Vasudheva Group, contributing to its mission of building knowledge-driven,
-                ethical, and socially responsive institutions. Rooted in classical scholarship and guided by
-                modern strategic frameworks, he represents a new generation of professionals committed to
-                inclusive development and institutional transformation.
-                With an academic foundation from Sampurnanand Sanskrit University, Suraj integrates
-                Indic intellectual traditions with contemporary policy and systems thinking. His work reflects
-                a deep commitment to equity, ethical governance, and sustainable societal progress.
+                  with The Vasudheva Group, contributing to its mission of building knowledge-driven,
+                  ethical, and socially responsive institutions. Rooted in classical scholarship and guided by
+                  modern strategic frameworks, he represents a new generation of professionals committed to
+                  inclusive development and institutional transformation.
+                  With an academic foundation from Sampurnanand Sanskrit University, Suraj integrates
+                  Indic intellectual traditions with contemporary policy and systems thinking. His work reflects
+                  a deep commitment to equity, ethical governance, and sustainable societal progress.
                 </p>
 
-               <h5 className="resume-section-header section-icon">◆ Role at Vasudheva Group </h5>
+                <h5 className="resume-section-header section-icon">◆ Role at Vasudheva Group </h5>
                 <p className="resume-text">Strategic Associate — Institutional Vision & Social Development </p>
                 <p className="resume-text">In this role, Suraj supports the group’s long-term mission by contributing to: </p>
                 <ul className="resume-list diamond-list">
@@ -799,7 +789,7 @@ organisations can scale sustainably "</blockquote>
                   <li> Knowledge synthesis from classical and contemporary sources </li>
                   <li> Community-centric program design </li>
                 </ul>
-                <p className="resume-text">His contributions strengthen the group’s vision of “Thinking From The Scratch… Towards 
+                <p className="resume-text">His contributions strengthen the group’s vision of “Thinking From The Scratch… Towards
                   Joyful Coexistence.” </p>
 
                 <h5 className="resume-section-header section-icon">◆ Professional Philosophy </h5>
@@ -811,7 +801,7 @@ organisations can scale sustainably "</blockquote>
                   <li> Cultural and philosophical grounding </li>
                   <li> Human dignity at the center of institutional design </li>
                 </ul>
-                <p className="resume-text">He views institutions not merely as structures, but as living systems that shape human 
+                <p className="resume-text">He views institutions not merely as structures, but as living systems that shape human
                   potential and societal harmony. </p>
 
                 <h5 className="resume-section-header section-icon">◆ Core Strengths </h5>
@@ -844,12 +834,12 @@ organisations can scale sustainably "</blockquote>
                 </ul>
 
                 <h5 className="resume-section-header section-icon">◆ Professional Narrative </h5>
-                <p className="resume-text">Suraj Mishra’s journey reflects the evolution of a thoughtful professional shaped by classical 
-                  education and inspired by contemporary institutional challenges. His association with The 
-                  Vasudheva Group places him at the intersection of knowledge, systems, and society — 
-                  where he contributes to designing frameworks that promote inclusive growth and ethical 
+                <p className="resume-text">Suraj Mishra’s journey reflects the evolution of a thoughtful professional shaped by classical
+                  education and inspired by contemporary institutional challenges. His association with The
+                  Vasudheva Group places him at the intersection of knowledge, systems, and society —
+                  where he contributes to designing frameworks that promote inclusive growth and ethical
                   governance. </p>
-                <p className="resume-text">He embodies a quiet yet powerful leadership ethos: to build systems that serve humanity 
+                <p className="resume-text">He embodies a quiet yet powerful leadership ethos: to build systems that serve humanity
                   with dignity, balance, and foresight. </p>
 
                 <h5 className="resume-section-header section-icon">◆ Personal Ethos </h5>
@@ -857,92 +847,35 @@ organisations can scale sustainably "</blockquote>
 
                 <h5 className="resume-section-header section-icon">◆ Connect & Collaborate </h5>
                 <p className="resume-text">
-                  Suraj welcomes collaboration with educators, policymakers, entrepreneurs, researchers, and 
-                  institutions committed to building a more equitable and sustainable future. 
+                  Suraj welcomes collaboration with educators, policymakers, entrepreneurs, researchers, and
+                  institutions committed to building a more equitable and sustainable future.
                 </p>
                 <p className="resume-text">
-                  Together, we can design systems that enable joyful coexistence. 
+                  Together, we can design systems that enable joyful coexistence.
                 </p>
               </div>
             )}
           </div>
         </div>
+     
       </section>
+      <div className="cards-footer-buttons">
+    <Link 
+      to="/parentcompanies" 
+      className="action-button secondary"
+    >
+      Explore Group Structure →
+    </Link>
+    
+    <Link 
+      to="/Contact" 
+      className="action-button primary"
+    >
+      Route a Request →
+    </Link>
+  </div>
 
      
-
-      {/* Governance Principles */}
-      {/* <section className="resume-section">
-        <div className="section-content">
-          
-          <ul className="resume-list diamond-list">
-            <li>Institutional integrity over individual prominence</li>
-            <li>Public interest over short-term gain</li>
-            <li>Evidence-based decision making</li>
-            <li>Transparency & accountability</li>
-            <li>Long-term knowledge stewardship</li>
-          </ul>
-        </div>
-      </section> */}
-
-      
-
-      {/* Federal Structure Table */}
-      <section className="resume-section">
-        <div className="section-content">
-          <h3 className="resume-heading diamond-heading">◆ Leadership & the Federal Structure</h3>
-          <p className="resume-text">The founding leadership serves as the governance nucleus while empowering subsidiaries to operate with domain autonomy.</p>
-          <table className="resume-table leadership-table">
-            <thead>
-              <tr>
-                <th>Function</th>
-                <th>Holdings Leadership</th>
-                <th>Subsidiaries</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Governance</td>
-                <td>✔</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Ethics & Integrity</td>
-                <td>✔</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Strategy</td>
-                <td>✔</td>
-                <td>✔</td>
-              </tr>
-              <tr>
-                <td>Execution</td>
-                <td></td>
-                <td>✔</td>
-              </tr>
-              <tr>
-                <td>Knowledge Preservation</td>
-                <td>✔</td>
-                <td>✔</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-   
-
-      {/* CTA */}
-      {/* CTA */}
-<div className="cta-wrapper resume-cta">
-  <Link to="/parentcompanies" className="learn-more resume-link">
-    Explore Group Structure →
-  </Link>
-  <Link to="/Contact" className="learn-more resume-link">
-    Route a Request →
-  </Link>
-</div>
     </div>
   );
 }
