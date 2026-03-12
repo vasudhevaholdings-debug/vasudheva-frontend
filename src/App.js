@@ -54,6 +54,11 @@ import Design from "./pages/Design";
 import Delivery from "./pages/Delivery";
 import Governance from "./pages/Governance";
 import ScrollToTopButton from "./pages/ScrollToTopButton";
+import Shashank from "./company-page/Shashank";
+import Gaurav from "./company-page/Gaurav";
+import Vivek from "./company-page/Vivek";
+import Amul from "./company-page/Amul";
+import Suraj from "./company-page/Suraj";
 
 function App() {
   const location = useLocation();
@@ -165,6 +170,11 @@ function App() {
         <Route path="/longterm" element={<LongTerm />} />
         <Route path="/ethical" element={<Ethical />} />
         <Route path="/commitment" element={<Commitment />} />
+        <Route path="/shashank" element={<Shashank/>}/>
+        <Route path="/gaurav" element={<Gaurav/>}/>
+        <Route path="/vivek" element={<Vivek/>}/>
+        <Route path="/amul" element={<Amul/>}/>
+        <Route path="/suraj" element={<Suraj/>}/>
       </Routes>
 
       <ScrollToTopButton />

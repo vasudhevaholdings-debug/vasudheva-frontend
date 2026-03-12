@@ -359,9 +359,9 @@
 
 .team-overview { 
   display: grid;
-   
    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 10px 25px;
+    gap: 10px;
+    padding: 20px;
    }
 
 .team-member-card {
@@ -644,5 +644,242 @@
   }
   .subtitle{
     font-size: 16px;
+  }
+}
+
+/* leadership-detail.css */
+/* ============================================
+   SHARED STYLES FOR ALL INDIVIDUAL LEADERSHIP DETAIL PAGES
+   (Shashank, Gaurav, Vivek, Amul, Suraj)
+   ============================================ */
+
+.leadership-detail-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Back link */
+.back-link,
+.leadership-detail-page a[href*="leadership"] {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  transition: color 0.2s;
+}
+
+.back-link:hover,
+.leadership-detail-page a[href*="leadership"]:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Profile header (photo + name/title) */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.profile-header img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.profile-header div h1 {
+  margin: 0 0 8px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0a2540;
+  letter-spacing: -0.5px;
+}
+
+.profile-header div h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* Main content area */
+.profile-content {
+  line-height: 1.65;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+.profile-content h5.resume-section-header.section-icon {
+  font-size: 1.35rem;
+  color: #0a2540;
+  margin: 48px 0 16px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 28px;
+}
+
+.profile-content h5.resume-section-header.section-icon::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-size: 1.4rem;
+}
+
+/* Quotes */
+.profile-content blockquote.resume-quote {
+  font-style: italic;
+  color: #475569;
+  border-left: 5px solid #3b82f6;
+  padding-left: 24px;
+  margin: 24px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Lists */
+.profile-content ul.resume-list.diamond-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0 32px;
+}
+
+.profile-content ul.resume-list.diamond-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.profile-content ul.resume-list.diamond-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+/* Strong text & vision */
+.profile-content .resume-vision {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #0a2540;
+  margin: 16px 0;
+}
+
+/* Footer buttons (same as main page) */
+.detail-buttons,
+.cards-footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  /* margin-top: 72px; */
+  flex-wrap: wrap;
+}
+
+.action-button,
+.detail-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  min-width: 240px;
+  text-align: center;
+}
+
+.action-button.secondary,
+.detail-buttons .secondary {
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.action-button.secondary:hover,
+.detail-buttons .secondary:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+.action-button.primary,
+.detail-buttons .primary {
+  background: #3b82f6;
+  color: white;
+  border: 1px solid #3b82f6;
+}
+
+.action-button.primary:hover,
+.detail-buttons .primary:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .leadership-detail-page {
+    padding: 40px 16px 80px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .profile-header img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-header div h1 {
+    font-size: 2.4rem;
+  }
+
+  .profile-header div h2 {
+    font-size: 1.3rem;
+  }
+
+  .detail-buttons,
+  .cards-footer-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .action-button,
+  .detail-buttons a {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-content {
+    font-size: 1rem;
+  }
+
+  .profile-content h5.resume-section-header.section-icon {
+    font-size: 1.25rem;
   }
 }
