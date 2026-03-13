@@ -1,3 +1,5 @@
+import problemImage from "../assets/hero/problemsolving.png";
+
 export default function ProblemSolve() {
 
   const problems = [
@@ -12,15 +14,24 @@ export default function ProblemSolve() {
 
   return (
     <section className="problem-section">
-      <div className="container">
+  <div className="container">
 
-        <h2 className="problem-title">What Problems Do We Solve?</h2>
+    {/* Center Title */}
+    <h2 className="problem-title">What Problems Do We Solve?</h2>
 
-        <p className="problem-subtitle">
-          Modern societies, institutions, and markets often face structural,
-          strategic, and operational challenges that limit sustainable growth.
-        </p>
+    <p className="problem-subtitle">
+      Modern societies, institutions, and markets often face structural,
+      strategic, and operational challenges that limit sustainable growth.
+    </p>
 
+    {/* Image + Points Layout */}
+    <div className="problem-layout">
+
+      <div className="problem-image">
+        <img src={problemImage} alt="Problem illustration" />
+      </div>
+
+      <div className="problem-content">
         <ul className="problem-list">
           {problems.map((item, index) => (
             <li key={index} className="problem-item">
@@ -28,8 +39,11 @@ export default function ProblemSolve() {
             </li>
           ))}
         </ul>
-
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
   );
 }
