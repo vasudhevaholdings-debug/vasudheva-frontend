@@ -72,9 +72,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="footer-location"
           >
-            Samneghat (Jankinagar)
+            N 1/2 A-K, near Sant Ravidas Ghat Road, Dumraon Colony,
             <br />
-            Varanasi, Uttar Pradesh
+            Varanasi, Uttar Pradesh 221005
           </a>
         </div>
       </div>
