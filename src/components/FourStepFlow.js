@@ -43,9 +43,12 @@ export default function FourStepFlow() {
   return (
     <section    style={{
     padding: "80px 20px",
-    backgroundColor: "#80a253",
-    backgroundImage:
-      "repeating-radial-gradient(circle at 0 0, transparent 0, rgba(200,200,230,0.5) 10px), repeating-linear-gradient(rgba(123,162,100,0.18), rgba(123,162,100,0.18))"
+    // background: "linear-gradient(90deg, #ecc135, #a8e063)",
+ backgroundImage: `
+  linear-gradient(90deg, rgba(236,193,53,0.85), rgba(76, 144, 175, 0.85)),
+  repeating-radial-gradient(circle at 0 0, transparent 0, rgba(200,200,230,0.5) 10px),
+  repeating-linear-gradient(rgba(123,162,100,0.9), rgba(123,162,100,0.9))
+`
   }}>
       <div>
         <h2>How we solve it</h2>

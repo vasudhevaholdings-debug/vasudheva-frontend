@@ -12,13 +12,14 @@ export default function Companies() {
     <section id="companies" className="group-showcase"   style={{
     padding: "80px 20px",
     backgroundColor: "#fbfcfe",
-    backgroundImage: `
-      linear-gradient(45deg, rgba(0,0,0,0.03) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(0,0,0,0.03) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.03) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.03) 75%)
+   backgroundImage: `
+      linear-gradient(135deg, #e3f2fd, #aa8cd6),
+      linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.1) 75%)
     `,
-    backgroundSize: "40px 40px"
+    backgroundSize: "cover,40px 40px"
   }}>
       <div className="container">
 

@@ -83,7 +83,7 @@ export default function ContactForm({
   return (
     <section id="contact"  style={{
     minHeight: "100vh",
-    backgroundColor: "#acdaa7",
+    backgroundColor: "#cca7da",
     backgroundImage: `
       linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)
