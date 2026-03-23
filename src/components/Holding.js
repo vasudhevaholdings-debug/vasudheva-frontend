@@ -2,7 +2,17 @@ import { Link } from "react-router-dom";
 
 export default function Holding() {
   return (
-    <section className="why-vasudheva">
+    <section className="why-vasudheva"   style={{
+    padding: "80px 20px",
+    backgroundColor: "#fbfcfe",
+    backgroundImage: `
+      linear-gradient(45deg, rgba(0,0,0,0.03) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0,0,0,0.03) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.03) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.03) 75%)
+    `,
+    backgroundSize: "40px 40px"
+  }}>
       <div className="container">
         <h2>Why Vasudheva Holdings</h2>
         <h4>Principles That Guide Our Decisions, Design, and Engagements</h4>

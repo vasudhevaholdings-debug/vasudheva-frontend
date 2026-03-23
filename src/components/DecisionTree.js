@@ -41,7 +41,12 @@ export default function DecisionTree() {
   };
 
   return (
-    <section>
+    <section style={{
+    padding: "80px 20px",
+    backgroundColor: "#80a253",
+    backgroundImage:
+      "repeating-radial-gradient(circle at 0 0, transparent 0, rgba(200,200,230,0.5) 10px), repeating-linear-gradient(rgba(123,162,100,0.18), rgba(123,162,100,0.18))"
+  }}>
       <div className="container">
         <h2>Who we work with</h2>
 

@@ -9,7 +9,17 @@ import publishLogo from "../assets/logos/publishLogo.png";
 
 export default function Companies() {
   return (
-    <section id="companies" className="group-showcase">
+    <section id="companies" className="group-showcase"   style={{
+    padding: "80px 20px",
+    backgroundColor: "#fbfcfe",
+    backgroundImage: `
+      linear-gradient(45deg, rgba(0,0,0,0.03) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0,0,0,0.03) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.03) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.03) 75%)
+    `,
+    backgroundSize: "40px 40px"
+  }}>
       <div className="container">
 
         <h1 className="group-title">The Vasudheva Group </h1>

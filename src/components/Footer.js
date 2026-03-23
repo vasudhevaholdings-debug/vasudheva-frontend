@@ -56,7 +56,7 @@ export default function Footer() {
             href="mailto:connect@vasudhevaholdings.com"
             className="footer-email"
           >
-            connect@vasudhevaholdings.com
+            connect@vasudheva.com
           </a>
 
           <a href="tel:+917523099113" className="footer-phone">

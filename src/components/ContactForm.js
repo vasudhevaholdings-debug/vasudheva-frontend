@@ -81,7 +81,16 @@ export default function ContactForm({
   };
 
   return (
-    <section id="contact">
+    <section id="contact"  style={{
+    minHeight: "100vh",
+    backgroundColor: "#acdaa7",
+    backgroundImage: `
+      linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)
+    `,
+    backgroundSize: "40px 40px"
+  }}
+>
       <div className="container">
         <h2>Start a Conversation</h2>
 
