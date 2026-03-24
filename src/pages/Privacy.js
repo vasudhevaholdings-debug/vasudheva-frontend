@@ -141,10 +141,10 @@ export default function Privacy() {
               <p className="mt-3">
                 Requests may be sent to:{' '}
                 <a 
-                  href="mailto:contact@vasudhevaholdings.com" 
+                  href="mailto:contact@vasudheva.com" 
                   className="text-primary fw-medium text-decoration-underline"
                 >
-                  connect@vasudhevaholdings.com
+                  connect@vasudheva.com
                 </a>
               </p>
 

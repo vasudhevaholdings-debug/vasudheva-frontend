@@ -130,7 +130,7 @@ export default function Profile() {
 
           <div className="button-group d-flex flex-column flex-md-row gap-3 justify-content-center">
             <a
-              href="mailto:connect@vasudhevaholdings.com"
+              href="mailto:connect@vasudheva.com"
               className="btn btn-primary btn-lg px-5 py-3"
             >
               Start a Conversation

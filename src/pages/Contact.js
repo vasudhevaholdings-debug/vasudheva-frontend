@@ -28,10 +28,11 @@ export default function Contact() {
             <div className="contact-item">
               <h3>📧 Email</h3>
               <a
-                href="mailto:connect@vasudhevaholdings.com"
+                href="mailto:connect@vasudheva.com"
                 className="footer-email"
+                style={{ color: "#c308f2" }}
               >
-                connect@vasudhevaholdings.com
+                connect@vasudheva.com
               </a>
             </div>
 
@@ -42,6 +43,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-website"
+                style={{ color: "#c308f2" }}
               >
                 www.vasudheva.org
               </a>
@@ -54,11 +56,24 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-location"
+                style={{ color: "#c308f2" }}
               >
-                Samneghat (Jankinagar)
+                  N 1/2 A-K, near Sant Ravidas Ghat Road, Dumraon Colony,
                 <br />
                 Varanasi, Uttar Pradesh
               </a>
+              <div className="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=25.284315,83.0075528&z=15&output=embed"
+      width="100%"
+      height="200"
+      style={{ border: 0, marginTop: "10px", borderRadius: "10px" }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Vasudheva Location"
+    ></iframe>
+  </div>
             </div>
 
           </div>
