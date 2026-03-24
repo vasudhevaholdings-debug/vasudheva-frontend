@@ -66,16 +66,29 @@ export default function Footer() {
             +91 8576929037
           </a>
 
-          <a
+          <a 
             href="https://maps.app.goo.gl/c5DfYzXkLQCGWUxb9?g_st=aw"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-location"
+            style={{ color: "#13decd" }}
           >
             N 1/2 A-K, near Sant Ravidas Ghat Road, Dumraon Colony,
             <br />
             Varanasi, Uttar Pradesh 221005
           </a>
+           {/* <div className="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=25.284315,83.0075528&z=15&output=embed"
+      width="100%"
+      height="200"
+      style={{ border: 0, marginTop: "10px", borderRadius: "10px" }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Vasudheva Location"
+    ></iframe>
+  </div> */}
         </div>
       </div>
 

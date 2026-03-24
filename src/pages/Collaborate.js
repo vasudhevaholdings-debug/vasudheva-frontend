@@ -55,7 +55,12 @@ export default function Collaborate() {
               </p>
 
               <div className="button-group">
-                <button className="primary">Start a Client Conversation</button>
+               <button 
+  className="primary" 
+  onClick={() => window.location.href = "/clientconversation"}
+>
+  Start a Client Conversation
+</button>
               </div>
             </div>
 

@@ -59,6 +59,7 @@ import Gaurav from "./company-page/Gaurav";
 import Vivek from "./company-page/Vivek";
 import Amul from "./company-page/Amul";
 import Suraj from "./company-page/Suraj";
+import ClientConversation from "./pages/ClientConversation";
 
 function App() {
   const location = useLocation();
@@ -175,6 +176,7 @@ function App() {
         <Route path="/vivek" element={<Vivek/>}/>
         <Route path="/amul" element={<Amul/>}/>
         <Route path="/suraj" element={<Suraj/>}/>
+        <Route path="/clientconversation" element={<ClientConversation/>}/>
       </Routes>
 
       <ScrollToTopButton />
