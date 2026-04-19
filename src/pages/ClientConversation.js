@@ -39,7 +39,7 @@ export default function ClientConversation() {
     <section className="page-wrapper">
       <div className="container">
 
-        <a href="/collaborate" className="back-link">← Back to Collaboration Paths</a>
+        {/* <a href="/collaborate" className="back-link">← Back to Collaboration Paths</a> */}
 
         <div className="hero-section">
           <h2>Start a Client Conversation</h2>

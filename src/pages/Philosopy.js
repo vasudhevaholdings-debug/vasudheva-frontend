@@ -225,8 +225,10 @@ export default function Philosophy() {
             <li>Looking for ethical partners</li>
           </ul>
           <div className="button-group">
-            <button>Explore How Our Companies Work</button>
-            <button onClick={() => navigate("/Contact")}>
+                       <button onClick={() => navigate("/parentcompanies")}>
+  Explore How Our Companies Work
+</button>
+            <button onClick={() => navigate("/clientconversation")}>
   Start a Conversation With Us
 </button>
           </div>

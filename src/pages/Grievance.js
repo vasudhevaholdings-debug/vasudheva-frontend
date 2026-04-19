@@ -78,7 +78,7 @@ export default function Grievance() {
               <p className="mt-3">
                 <strong>Email:</strong>{' '}
                 <a 
-                  href="mailto:contact@vasudheva.com" 
+                  href="mailto:connect@vasudheva.com" 
                   className="text-primary fw-medium text-decoration-underline"
                 >
                   connect@vasudheva.com

@@ -1,6 +1,9 @@
 import "../stakeholderlayout.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Collaborate() {
+  const navigate = useNavigate();
+
   return (
     <section className="page-wrapper">
       <div className="container">
@@ -55,12 +58,12 @@ export default function Collaborate() {
               </p>
 
               <div className="button-group">
-               <button 
-  className="primary" 
-  onClick={() => window.location.href = "/clientconversation"}
->
-  Start a Client Conversation
-</button>
+                <button 
+                  className="primary" 
+                  onClick={() => navigate("/clientconversation")}
+                >
+                  Start a Client Conversation
+                </button>
               </div>
             </div>
 
@@ -93,7 +96,12 @@ export default function Collaborate() {
               </p>
 
               <div className="button-group">
-                <button className="primary">Propose a Partnership</button>
+                <button 
+                  className="primary"
+                  onClick={() => navigate("/partnership")}
+                >
+                  Propose a Partnership
+                </button>
               </div>
             </div>
 
@@ -126,101 +134,44 @@ export default function Collaborate() {
               </p>
 
               <div className="button-group">
-                <button className="primary">Start a Publishing or Knowledge Conversation</button>
+                <button 
+                  className="primary"
+                  onClick={() => navigate("/publishing")}
+                >
+                  Start a Publishing or Knowledge Conversation
+                </button>
               </div>
             </div>
 
-            {/* PATH 4 – TALENT, FELLOWS & CONTRIBUTORS */}
+            {/* PATH 4 – TALENT */}
             <div className="path-card">
               <h3>PATH 4 — Talent, Fellows & Contributors</h3>
-              <p className="who-for">
-                <strong>Who this is for:</strong> Researchers & analysts, educators & trainers, 
-                media professionals, designers, technologists, strategists, students & early-career professionals
-              </p>
-
-              <h4>Typical Intentions</h4>
-              <ul>
-                <li>Work with the Vasudheva Group</li>
-                <li>Join research, education, or media initiatives</li>
-                <li>Contribute expertise or ideas</li>
-                <li>Explore long-term association</li>
-              </ul>
-
-              <h4>How collaboration works</h4>
-              <ul>
-                <li>Expression of interest</li>
-                <li>Review of profile and intent</li>
-                <li>Alignment with group needs and values</li>
-                <li>Engagement through roles, fellowships, or projects</li>
-              </ul>
-
-              <p className="delivered-through">
-                Coordinated by relevant subsidiary (aligned through group-level principles)
-              </p>
 
               <div className="button-group">
-                <button className="primary">Express Interest in Working with Us</button>
+                <button 
+                  className="primary"
+                  onClick={() => navigate("/careers")}
+                >
+                  Express Interest in Working with Us
+                </button>
               </div>
             </div>
 
-            {/* PATH 5 – GUIDED & COMPLEX COLLABORATION */}
+            {/* PATH 5 */}
             <div className="path-card complex">
               <h3>PATH 5 — Guided & Complex Collaboration</h3>
-              <p className="who-for">
-                <strong>When to choose this:</strong> Your interest spans multiple areas, you represent a consortium or coalition, 
-                the problem is systemic or long-term, or you are unsure which company to approach
-              </p>
-
-              <h4>How this works</h4>
-              <ul>
-                <li>Initial guided conversation</li>
-                <li>Clarification of intent and scope</li>
-                <li>Design of a multi-company or phased engagement</li>
-              </ul>
-
-              <p className="delivered-through">
-                Coordinated by Vasudheva Holdings Pvt. Ltd.
-              </p>
 
               <div className="button-group">
-                <button className="primary">Request a Guided Conversation</button>
+                <button 
+                  className="primary" 
+                  onClick={() => navigate("/clientconversation")}
+                >
+                  Request a Guided Conversation
+                </button>
               </div>
             </div>
 
           </div>
-        </section>
-
-        {/* COLLABORATION PRINCIPLES – TRUST SIGNAL */}
-        <section className="principles-section">
-          <h2>How We Approach Collaboration</h2>
-          <p>We believe collaboration must be:</p>
-          <ul>
-            <li>Purpose-aligned</li>
-            <li>Ethically grounded</li>
-            <li>Evidence-based</li>
-            <li>Transparent and accountable</li>
-            <li>Respectful of all stakeholders</li>
-            <li>Sensitive to social and ecological impact</li>
-          </ul>
-
-          <p className="important-note">
-            We may decline engagements that conflict with our values, are extractive or short-termist, 
-            or undermine trust or public interest. This protects all parties.
-          </p>
-        </section>
-
-        {/* FINAL UNIFIED CALL TO ACTION */}
-        <section className="final-cta">
-          <h2>Start the Right Conversation</h2>
-          <p>We respond thoughtfully—not automatically.</p>
-
-          <div className="button-group large">
-            <button className="primary">Submit & Route My Request</button>
-          </div>
-
-          <p className="footnote">
-            We value clarity over urgency. Every collaboration begins with understanding, not assumptions.
-          </p>
         </section>
 
       </div>

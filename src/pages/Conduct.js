@@ -104,7 +104,7 @@ export default function Conduct() {
               <p>
                 <strong>Email:</strong>{' '}
                 <a 
-                  href="mailto:contact@vasudheva.com" 
+                  href="mailto:connect@vasudheva.com" 
                   className="text-primary fw-medium text-decoration-underline"
                 >
                   connect@vasudheva.com

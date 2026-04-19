@@ -89,7 +89,7 @@ export default function Leadership() {
         {/* ============================================= */}
         {/* Amul Patel */}
         {/* ============================================= */}
-        <div className="team-member-card">
+        {/* <div className="team-member-card">
           <div className="member-photo-wrapper">
             <img src={amulPhoto} alt="Amul Patel" className="member-photo" />
           </div>
@@ -102,7 +102,7 @@ export default function Leadership() {
             </Link>
             
           </div>
-        </div>
+        </div> */}
 
         {/* ============================================= */}
         {/* Suraj Mishra */}
