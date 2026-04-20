@@ -62,9 +62,9 @@ export default function Footer() {
           <a href="tel:+917523099113" className="footer-phone">
             +91 7523099113
           </a>
-          <a href="tel:+91 8576929037" className="footer-phone">
+          {/* <a href="tel:+91 8576929037" className="footer-phone">
             +91 8576929037
-          </a>
+          </a> */}
 
           <a 
             href="https://maps.app.goo.gl/c5DfYzXkLQCGWUxb9?g_st=aw"
