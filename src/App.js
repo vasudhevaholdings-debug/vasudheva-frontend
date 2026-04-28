@@ -57,10 +57,14 @@ import ScrollToTopButton from "./pages/ScrollToTopButton";
 import Shashank from "./company-page/Shashank";
 import Gaurav from "./company-page/Gaurav";
 import Vivek from "./company-page/Vivek";
-import Amul from "./company-page/Amul";
 import Suraj from "./company-page/Suraj";
 import ClientConversation from "./pages/ClientConversation";
-
+import AshmitaSingh from './company-page/Ashmita';
+import AnmolSharma from './company-page/Anmol';
+import AnjaliPathak from './company-page/Anjali';
+import IshaBharati from './company-page/Isha';
+import SuryaBansiSingh from "./company-page/Suryabansi";
+import AnupamKumari from "./company-page/Anupam";
 function App() {
   const location = useLocation();
 
@@ -174,7 +178,13 @@ function App() {
         <Route path="/shashank" element={<Shashank/>}/>
         <Route path="/gaurav" element={<Gaurav/>}/>
         <Route path="/vivek" element={<Vivek/>}/>
-        <Route path="/amul" element={<Amul/>}/>
+        <Route path="/AshmitaSingh" element={<AshmitaSingh />} />
+        <Route path="/AnmolSharma" element={<AnmolSharma />} />
+        <Route path="/AnjaliPathak" element={<AnjaliPathak />} />
+         <Route path="/IshaBharati" element={<IshaBharati />} />
+         <Route path="/SuryaBansiSingh" element={<SuryaBansiSingh />} />
+         <Route path="/AnupamKumari" element={<AnupamKumari />} />
+
         <Route path="/suraj" element={<Suraj/>}/>
         <Route path="/clientconversation" element={<ClientConversation/>}/>
       </Routes>

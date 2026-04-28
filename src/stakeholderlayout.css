@@ -328,15 +328,13 @@
 =================================== */
 
 .leadership-container {
-  /* max-width: 1100px; */
   margin: 0 auto;
-  padding: 80px 0px 40px;
-  /* color: #1a1a1a;
-  background: #ffffff; */
+  padding: 80px 20px 60px;
 }
 
 .leadership-header {
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .leadership-header h1 {
@@ -353,36 +351,20 @@
   color: #5a7184;
   max-width: 720px;
   margin: 0 auto;
-  margin-bottom: 30px;
   line-height: 1.5;
 }
 
+/* ==================== TEAM GRID - 2 CARDS PER ROW ==================== */
 .team-overview {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
-  gap: 24px;
-  /* padding: 20px; */
-  max-width: 80%;
-  justify-self: center;
-  
+  grid-template-columns: repeat(auto-fit, minmax(455px, 1fr)); /* 2 cards per row */
+  gap: 8px;
+  max-width: 982px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
-
-
-.team-member-card:nth-child(1),
-.team-member-card:nth-child(2) {
-  grid-column: span 3;
-  
-}
-
-
-
-.team-member-card:nth-child(3),
-.team-member-card:nth-child(4),
-.team-member-card:nth-child(5) {
-  grid-column: span 3;
-}
-
+/* Make all cards equal width */
 .team-member-card {
   background: #dec8e2;
   border: 1px solid #e5e7eb;
@@ -390,12 +372,13 @@
   overflow: hidden;
   transition: all 0.25s ease;
   cursor: pointer;
+  height: 100%; /* Makes cards same height */
 }
 
 .team-member-card:hover {
   border-color: #cbd5e1;
   box-shadow: 0 12px 32px rgba(0,0,0,0.06);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .team-member-card.active {
@@ -403,30 +386,30 @@
   box-shadow: 0 16px 48px rgba(59,130,246,0.12);
 }
 
-
+/* Photo & Content */
 .member-photo-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;         
-  max-width: 240px;              
-  margin: 32px auto 0;           
+  aspect-ratio: 1 / 1;
+  max-width: 220px;
+  margin: 32px auto 0;
   overflow: hidden;
-  border-radius: 50%;            
-  border: 4px solid #e5e7eb;    
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+  border-radius: 50%;
+  border: 5px solid #f8fafc;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .member-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;             
-  object-position: center top;   
-  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
 }
 
 .team-member-card:hover .member-photo {
   transform: scale(1.08);
-  transition: transform 0.4s ease;
 }
+
 .member-info {
   padding: 28px 24px 32px;
   text-align: center;
@@ -449,21 +432,22 @@
 .member-subtitle {
   font-size: 0.95rem;
   color: #64748b;
-  margin: 0 0 16px;
+  margin-bottom: 16px;
 }
 
 .member-summary {
   font-size: 1rem;
   line-height: 1.6;
   color: #475569;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
 }
 
+/* Buttons */
 .details-toggle {
   background: none;
   border: 1px solid #cbd5e1;
   color: #3b82f6;
-  padding: 8px 20px;
+  padding: 10px 24px;
   border-radius: 6px;
   font-size: 0.95rem;
   cursor: pointer;
@@ -475,81 +459,31 @@
   border-color: #93c5fd;
 }
 
+/* Expanded Content */
 .member-expanded {
   padding: 0 24px 32px;
   border-top: 1px solid #e5e7eb;
   text-align: left;
 }
 
-.expanded-intro {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #334155;
-  margin: 24px 0 16px;
-}
-
-.key-strengths {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px;
-}
-
-.key-strengths li {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #475569;
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 8px;
-}
-
-.key-strengths li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #3b82f6;
-  font-size: 1.4rem;
-  line-height: 1;
-}
-
-.full-profile-link {
-  display: inline-block;
-  color: #3b82f6;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.full-profile-link:hover {
-  border-bottom-color: #3b82f6;
-}
-
+/* Footer Buttons */
 .cards-footer-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 28px;
-  margin-top: 20px;           /* space after the last card */
-  padding: 32px 0 0px;       /* bottom padding for breathing room */
-  flex-wrap: wrap;            /* stack on very small screens */
+  gap: 24px;
+  margin-top: 50px;
+  flex-wrap: wrap;
 }
 
-/* Button styling – clean & professional */
 .action-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 14px 36px;
   font-size: 1.05rem;
   font-weight: 500;
-  text-decoration: none;
   border-radius: 8px;
   transition: all 0.25s ease;
-  min-width: 220px;           /* consistent width */
+  min-width: 220px;
   text-align: center;
 }
-
 
 .action-button.secondary {
   background-color: #f8fafc;
@@ -560,9 +494,8 @@
 .action-button.secondary:hover {
   background-color: #e2e8f0;
   border-color: #94a3b8;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
-
 
 .action-button.primary {
   background-color: #3b82f6;
@@ -572,13 +505,21 @@
 
 .action-button.primary:hover {
   background-color: #2563eb;
-  border-color: #2563eb;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+}
+
+/* ====================== RESPONSIVE ====================== */
+
+@media (max-width: 1024px) {
+  .team-overview {
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 28px;
+  }
 }
 
 @media (max-width: 768px) {
   .leadership-container {
-    padding: 60px 0px 80px;
+    padding: 60px 15px 40px;
   }
   
   .leadership-header h1 {
@@ -586,92 +527,29 @@
   }
   
   .team-overview {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;           /* 1 card per row on mobile */
     gap: 32px;
-  }
-  
-  .member-photo-wrapper {
-    height: 200px;
-  }
-  
-}
-@media (max-width: 768px) {
-  .team-overview {
-    grid-template-columns: 1fr;
+    padding: 0 10px;
   }
 
-  .team-member-card {
-    grid-column: span 1 !important;
+  .member-photo-wrapper {
+    max-width: 180px;
   }
 }
-@media (max-width: 640px) {
+
+@media (max-width: 480px) {
+  .team-overview {
+    gap: 24px;
+  }
+  
   .cards-footer-buttons {
     flex-direction: column;
-    gap: 16px;
-    margin-top: 40px;
-    padding: 24px 0 40px;
+    align-items: center;
   }
   
- 
-}
-/* =====================================================
-   RESPONSIVE DESIGN
-===================================================== */
-
-@media (max-width: 1024px) {
-
-  .insights-categories-grid,
-  .insight-card-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .page-wrapper h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .page-wrapper {
-    padding: 70px 20px;
-  }
-
-  .insights-categories-grid,
-  .insight-card-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .button-group {
-    flex-direction: column;
-  }
-
-  .button-group button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .page-wrapper h2 {
-    font-size: 1.8rem;
-  }
-
-  .page-wrapper p {
-    font-size: 0.95rem;
-  }
-  .pillar-section{
-    max-width: 450px;
-  margin: 1rem;
-  padding: 1rem;
-  }
-  .pillar-section h2{
-    font-size: 27px;
-  }
-  .pillar-section h3{
-    font-size: 20px;
-  }
-  .subtitle{
-    font-size: 16px;
+  .action-button {
+    min-width: 100%;
+    max-width: 320px;
   }
 }
 
