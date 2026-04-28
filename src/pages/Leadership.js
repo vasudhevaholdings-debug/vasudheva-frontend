@@ -58,7 +58,7 @@ export default function Leadership() {
             <p className="member-title">Head – European Strategy & Market Development</p>
             <p className="member-subtitle">Vasudheva Holdings Pvt. Ltd.</p>
             <p className="member-teaser">Sociologist, Research Scholar & Global Strategy Leader | Founding Team Member</p>
-            <Link to="/ashmita" className="details-toggle">
+            <Link to="/AshmitaSingh" className="details-toggle">
               Read more →
             </Link>
           </div>
