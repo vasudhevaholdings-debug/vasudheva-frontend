@@ -137,7 +137,7 @@ export default function Gaurav() {
         <h5 className="resume-section-header section-icon">◆ Skills & Expertise</h5>
         <ul className="resume-list diamond-list">
           <li><strong>Institutional & Strategic:</strong> Systems thinking & institutional design; Governance support & coordination; Social impact frameworks</li>
-          <li><strong>Technical & Analytical:</strong> Data analysis; Python programming; Front-end development; Computational problem solving</li>
+          <li><strong>Technical & Analytical:</strong> Data analysis; Python programming; Full Stack Development; REST API Development; DevOps Fundamentals; CI/CD Pipeline (Learning & Implementation); Cloud Deployment (Basics); Computational problem solving</li>
           <li><strong>Business & Outreach:</strong> Account management; Sales & marketing strategy; Stakeholder engagement; Process conceptualization & implementation</li>
         </ul>
 

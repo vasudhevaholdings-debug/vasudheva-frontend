@@ -103,7 +103,7 @@ export default function Leadership() {
             <h3 className="member-name">Gaurav Dwivedi</h3>
             <p className="member-title">Co-Founder</p>
             <p className="member-subtitle">The Vasudheva Group</p>
-            <p className="member-teaser">Tech Graduate | Entrepreneur & Independent Researcher | Social Equity Advocate</p>
+            <p className="member-teaser">Tech Graduate | Entrepreneur & Independent Researcher | Social Equity Advocate & Institutional Design</p>
             <Link to="/Gaurav" className="details-toggle">
               Read more →
             </Link>
