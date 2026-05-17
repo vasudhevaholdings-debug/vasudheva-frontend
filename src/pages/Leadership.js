@@ -33,8 +33,8 @@ export default function Leadership() {
 
       <section className="team-overview">
         
-        {/* Shashank Singh */}
-        <div className="team-member-card">
+        
+        {/* <div className="team-member-card">
           <div className="member-photo-wrapper">
             <img src={shashankPhoto} alt="Shashank Singh" className="member-photo" />
           </div>
@@ -48,7 +48,7 @@ export default function Leadership() {
             </Link>
           </div>
         </div>
-           {/* Mrs. Ashmita Singh - Head European Strategy */}
+          
         <div className="team-member-card">
           <div className="member-photo-wrapper">
             <img src={asmitaPhoto} alt="Ashmita Singh" className="member-photo" />
@@ -62,9 +62,9 @@ export default function Leadership() {
               Read more →
             </Link>
           </div>
-        </div>
+        </div> */}
           {/* Anmol Sharma - Head of Operations & IT */}
-        <div className="team-member-card">
+        {/* <div className="team-member-card">
           <div className="member-photo-wrapper">
             <img src={anmolPhoto} alt="Anmol Sharma" className="member-photo" />
           </div>
@@ -77,9 +77,9 @@ export default function Leadership() {
               Read more →
             </Link>
           </div>
-        </div>
+        </div> */}
           {/* Dr. Surya Bansi Singh - Scientific Advisor */}
-        <div className="team-member-card">
+        {/* <div className="team-member-card">
           <div className="member-photo-wrapper">
             <img src={doctorPhoto} alt="Dr. Surya Bansi Singh" className="member-photo" />
           </div>
@@ -92,7 +92,7 @@ export default function Leadership() {
               Read more →
             </Link>
           </div>
-        </div>
+        </div> */}
 
         {/* Gaurav Dwivedi */}
         <div className="team-member-card">
@@ -141,7 +141,7 @@ export default function Leadership() {
         </div>
 
         {/* Isha Bharati - Associate Operations & IT */}
-        <div className="team-member-card">
+        {/* <div className="team-member-card">
           <div className="member-photo-wrapper">
             <img src={ishaPhoto} alt="Isha Bharati" className="member-photo" style={{ objectPosition: 'center' }} />
           </div>
@@ -154,7 +154,7 @@ export default function Leadership() {
               Read more →
             </Link>
           </div>
-        </div>
+        </div> */}
  {/* Vivek Kumar Ojha */}
         <div className="team-member-card">
           <div className="member-photo-wrapper">
